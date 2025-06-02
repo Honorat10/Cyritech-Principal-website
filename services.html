@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - CYRI GROUP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyri-blue': {
+                            light: '#3B82F6',
+                            DEFAULT: '#1E40AF', 
+                            dark: '#1E3A8A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-cyri-blue-dark">CYRI GROUP</h1>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="navbar-link text-white hover:text-cyri-blue-light transition-colors" data-translate="nav.home">Accueil</a>
+                    <a href="about.html" class="navbar-link text-white hover:text-cyri-blue-light transition-colors" data-translate="nav.about">À propos</a>
+                    <a href="services.html" class="navbar-link text-white hover:text-cyri-blue-light transition-colors font-semibold border-b-2 border-cyri-blue-light" data-translate="nav.services">Services</a>
+                    <a href="contact.html" class="navbar-link text-white hover:text-cyri-blue-light transition-colors" data-translate="nav.contact">Contact</a>
+                    <a href="index.html#audit" class="bg-cyri-blue-light text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all" data-translate="nav.audit">Audit Gratuit</a>
+                    
+                    <!-- Language Selector Desktop -->
+                    <div class="relative">
+                        <button id="language-btn-desktop" class="flex items-center space-x-2 text-white hover:text-blue-200 transition-colors px-3 py-2 rounded-md hover:bg-blue-700">
+                            <span class="text-lg">🇫🇷</span>
+                            <span class="text-sm font-medium">FR</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown-desktop" class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border z-50 hidden">
+                            <button class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center space-x-2 first:rounded-t-lg" data-lang="fr">
+                                <span class="text-sm">🇫🇷</span>
+                                <span class="text-sm">Français</span>
+                            </button>
+                            <button class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center space-x-2" data-lang="en">
+                                <span class="text-sm">🇬🇧</span>
+                                <span class="text-sm">English</span>
+                            </button>
+                            <button class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center space-x-2 last:rounded-b-lg" data-lang="zh">
+                                <span class="text-sm">🇨🇳</span>
+                                <span class="text-sm">中文</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="navbar-mobile-btn text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg rounded-lg mt-2">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-cyri-blue-light" data-translate="nav.home">Accueil</a>
+                    <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-cyri-blue-light" data-translate="nav.about">À propos</a>
+                    <a href="services.html" class="block px-3 py-2 text-cyri-blue-dark font-semibold" data-translate="nav.services">Services</a>
+                    <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-cyri-blue-light" data-translate="nav.contact">Contact</a>
+                    <a href="index.html#audit" class="block px-3 py-2 bg-cyri-blue-light text-white rounded-lg mx-3 text-center" data-translate="nav.audit">Audit Gratuit</a>
+                    
+                    <!-- Language Selector Mobile -->
+                    <div class="px-3 py-2 border-t border-gray-200">
+                        <div class="text-sm text-gray-500 mb-2">Langue</div>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center space-x-1 text-blue-600 font-semibold" data-lang="fr">
+                                <span>🇫🇷</span>
+                                <span class="text-sm">FR</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-700 hover:text-blue-500" data-lang="en">
+                                <span>🇬🇧</span>
+                                <span class="text-sm">EN</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-700 hover:text-blue-500" data-lang="zh">
+                                <span>🇨🇳</span>
+                                <span class="text-sm">ZH</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-20 pb-16 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-translate="hero.title">Nos Services</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-translate="hero.subtitle">
+                Solutions informatiques complètes pour transformer votre entreprise
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-lg">
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">Abidjan</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">Cotonou</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">Luxembourg</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">Bruxelles</span>
+                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">Amsterdam</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-cyri-blue-dark" data-translate="services.title">Nos Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.audit.title">Audit Informatique</h3>
+                    <p class="text-gray-600" data-translate="service.audit.desc">Évaluation complète de votre infrastructure IT pour identifier les points d'amélioration et optimiser vos performances.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.web.title">Développement Web</h3>
+                    <p class="text-gray-600" data-translate="service.web.desc">Création de sites web et applications web modernes, responsive et optimisées pour le référencement.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.digital.title">Transformation Digitale</h3>
+                    <p class="text-gray-600" data-translate="service.digital.desc">Accompagnement stratégique pour moderniser vos processus et adopter les technologies innovantes.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.security.title">Sécurité Informatique</h3>
+                    <p class="text-gray-600" data-translate="service.security.desc">Protection avancée de vos données et systèmes contre les menaces cybernétiques.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2m-2-4h.01M17 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.cloud.title">Infrastructure Cloud</h3>
+                    <p class="text-gray-600" data-translate="service.cloud.desc">Migration et gestion d'infrastructures cloud sécurisées pour optimiser vos coûts et performances.</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 11-9.75 9.75 9.75 9.75 0 019.75-9.75z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.support.title">Support Technique</h3>
+                    <p class="text-gray-600" data-translate="service.support.desc">Assistance technique 24/7 pour maintenir vos systèmes opérationnels et résoudre rapidement les incidents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-translate="footer.company">CYRI GROUP</h3>
+                    <p class="text-gray-400" data-translate="footer.tagline">Votre partenaire technologique de confiance pour transformer votre entreprise.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.services">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li data-translate="service.audit.title">Audit Informatique</li>
+                        <li data-translate="service.web.title">Développement Web</li>
+                        <li data-translate="service.security.title">Sécurité</li>
+                        <li data-translate="service.support.title">Support Technique</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.offices">Nos Bureaux</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Abidjan, Côte d'Ivoire</li>
+                        <li>Cotonou, Bénin</li>
+                        <li>Luxembourg</li>
+                        <li>Bruxelles, Belgique</li>
+                        <li>Amsterdam, Pays-Bas</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.contact">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@cyrigroup.com</li>
+                        <li>+33 1 23 45 67 89</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p data-translate="footer.copyright">&copy; 2024 CYRI GROUP. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="language-selector.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const navbarLinks = document.querySelectorAll('.navbar-link');
+            const mobileBtn = document.querySelector('.navbar-mobile-btn');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+                // Change links to black when scrolled (services page)
+                navbarLinks.forEach(link => {
+                    if (!link.classList.contains('border-b-2')) {
+                        link.classList.remove('text-white');
+                        link.classList.add('text-gray-700');
+                    }
+                });
+                if (mobileBtn) {
+                    mobileBtn.classList.remove('text-white');
+                    mobileBtn.classList.add('text-gray-700');
+                }
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                // Change links to white when at top
+                navbarLinks.forEach(link => {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-white');
+                });
+                if (mobileBtn) {
+                    mobileBtn.classList.remove('text-gray-700');
+                    mobileBtn.classList.add('text-white');
+                }
+            }
+        });
+
+        // Language selector toggle (desktop)
+        const languageBtnDesktop = document.getElementById('language-btn-desktop');
+        const languageDropdownDesktop = document.getElementById('language-dropdown-desktop');
+        
+        languageBtnDesktop.addEventListener('click', () => {
+            languageDropdownDesktop.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!languageBtnDesktop.contains(event.target) && !languageDropdownDesktop.contains(event.target)) {
+                languageDropdownDesktop.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

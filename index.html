@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyritech Cloud Security § Loans - Votre partenaire IT </title>
+    <meta name="description" content="Cyritech : Solutions 360° en cloud, cybersécurité et financement informatique. Présent en Afrique et Europe. Audit gratuit disponible.">
+    <meta name="author" content="Cyritech">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    
+    
+</head>
+<body class="bg-white text-cyri-black">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="./logo.png" alt=""  class="mt-7 logo">
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="navbar-link text-black hover:text-cyri-blue-light transition-colors">Accueil</a>
+                    <a href="about.html" class="navbar-link text-black hover:text-cyri-blue-light transition-colors">À propos</a>
+                    <a href="services.html" class="navbar-link text-black hover:text-cyri-blue-light transition-colors">Services</a>
+                    <a href="contact.html" class="navbar-link text-black hover:text-cyri-blue-light transition-colors">Contact</a>
+                    <a href="#audit" class="bg-cyri-blue-light text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Audit Gratuit</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="navbar-mobile-btn text-black">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-cyri-blue-dark rounded-lg mt-2 p-4">
+                <a href="index.html" class="block text-white py-2 hover:text-cyri-blue-light">Accueil</a>
+                <a href="about.html" class="block text-white py-2 hover:text-cyri-blue-light">À propos</a>
+                <a href="services.html" class="block text-white py-2 hover:text-cyri-blue-light">Services</a>
+                <a href="contact.html" class="block text-white py-2 hover:text-cyri-blue-light">Contact</a>
+                <a href="#audit" class="block bg-cyri-blue-light text-white py-2 px-4 rounded-lg mt-2 text-center">Audit Gratuit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center hero-gradient pt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-cyri-blue-dark mb-6 leading-tight">
+                        Cyritech Cloud Security & Loans
+                    </h1>
+                    <p class="text-xl lg:text-2xl text-cyri-black mb-8 font-medium">
+                        Votre partenaire en transformation digitale
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 max-w-2xl">
+                        Un accompagnement 360° : de l'audit à l'implémentation, du conseil IT au support IT. 
+                      
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#audit" class="bg-cyri-blue-light text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all">
+                            Demandez un audit gratuit
+                        </a>
+                        <a href="services.html" class="border-2 border-cyri-blue-dark text-cyri-blue-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyri-blue-dark hover:text-white transition-all">
+                            Nos services
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 3D Server Animation -->
+                <div class="flex justify-center">
+                    <div id="server-3d-container" class="server-3d-container"></div>
+                    <div id="server-fallback" class="server-3d-container hidden flex items-center justify-center">
+                        <div class="w-full h-full bg-gradient-to-br from-cyri-blue-light to-cyri-blue-dark rounded-lg flex items-center justify-center floating-animation shadow-2xl">
+                            <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M4 2h16c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2zm0 2v4h16V4H4zm0 6v4h16v-4H4zm0 6v4h16v-4H4z"/>
+                                <circle cx="6" cy="6" r="1"/>
+                                <circle cx="9" cy="6" r="1"/>
+                                <circle cx="6" cy="12" r="1"/>
+                                <circle cx="9" cy="12" r="1"/>
+                                <circle cx="6" cy="18" r="1"/>
+                                <circle cx="9" cy="18" r="1"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Phares -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Nos services phares</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    De l'audit à l'implémentation, nous accompagnons votre transformation digitale
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Cloud & Cybersécurité</h3>
+                    <p class="text-gray-600 mb-6">Audit, migration et surveillance de vos infrastructures cloud avec sécurité renforcée.</p>
+                    <a href="services.html#cloud" class="text-cyri-blue-light font-semibold hover:underline">En savoir plus →</a>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Développement Logiciel</h3>
+                    <p class="text-gray-600 mb-6">Applications sur mesure, sécurisées et scalables pour tous vos besoins métier.</p>
+                    <a href="services.html#dev" class="text-cyri-blue-light font-semibold hover:underline">En savoir plus →</a>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Prêts d'Équipements IT</h3>
+                    <p class="text-gray-600 mb-6">Matériel fiable, adapté et prêt à l’emploi pour soutenir vos projets, sans compromis.</p>
+                    <a href="services.html#equipment" class="text-cyri-blue-light font-semibold hover:underline">En savoir plus →</a>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">ERP/CRM Dolibarr</h3>
+                    <p class="text-gray-600 mb-6">Intégration et paramétrage d'ERP/CRM avec formation complète de vos équipes.</p>
+                    <a href="services.html#erp" class="text-cyri-blue-light font-semibold hover:underline">En savoir plus →</a>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586l-1 1V5H4v14h16v-2.586l1 1V20a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"/>
+                            <path d="M17.707 7.293a1 1 0 010 1.414L15.414 11l2.293 2.293a1 1 0 01-1.414 1.414L14 12.414l-2.293 2.293a1 1 0 01-1.414-1.414L12.586 11 10.293 8.707a1 1 0 011.414-1.414L14 9.586l2.293-2.293a1 1 0 011.414 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Reprise d'activité</h3>
+                    <p class="text-gray-600 mb-6">Assistance technique continue et plans de reprise après incident personnalisés.</p>
+                    <a href="services.html#support" class="text-cyri-blue-light font-semibold hover:underline">En savoir plus →</a>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Conseil IT</h3>
+                    <p class="text-gray-600 mb-6">Consultation IT stratégique et pilotage de projets avec expertise locale.</p>
+                    <a href="services.html#consulting" class="text-cyri-blue-light font-semibold hover:underline">En savoir plus →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi Cyritech -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll">
+                    <h2 class="text-4xl font-bold text-cyri-blue-dark mb-8">Pourquoi choisir Cyritech</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Approche 360°</h3>
+                                <p class="text-gray-600">Audit → Conseil → implémentation →  support. Nous, on ne fait pas semblant : nous vous accompagnons de A à Z, à chaque étape de votre projet.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Approche centrée client</h3>
+                                <p class="text-gray-600">
+                                    Nous insistons sur notre engagement à comprendre les besoins uniques de nos clients, 
+                                    leurs préférences de communication, et à leur fournir des solutions personnalisées.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Expertise & Expérience</h3>
+                                <p class="text-gray-600">Nous présentons des projets réussis, des témoignages clients
+                                     et des études de cas qui démontrent notre capacité à répondre efficacement aux besoins de nos clients.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Support 24/7 et présence locale</h3>
+                                <p class="text-gray-600">Afrique & Europe : un support réactif et personnalisé dans votre fuseau horaire.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 p-6 bg-cyri-blue-light bg-opacity-10 rounded-lg">
+                        <p class="text-lg text-cyri-blue-dark font-semibold italic">
+                            "Avec nous, votre IT avance sans jamais se perdre..."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="fade-in-scroll">
+                    <div class="bg-gradient-to-br from-cyri-blue-dark to-cyri-blue-light rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">Nos chiffres clés</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold mb-2">30+</div>
+                                <div class="text-sm opacity-90">Clients et partenaires</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold mb-2">90%</div>
+                                <div class="text-sm opacity-90">Taux de satisfaction</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold mb-2">24/7</div>
+                                <div class="text-sm opacity-90">Support technique</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold mb-2">48h</div>
+                                <div class="text-sm opacity-90">Traitement dossier</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secteurs d'activité -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Secteurs d'activité</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Nous accompagnons tous les secteurs avec une expertise métier adaptée
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Secteur 1 -->
+                <div class="text-center fade-in-scroll">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <svg class="w-10 h-10 text-cyri-blue-light" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Éducation</h3>
+                    <p class="text-gray-600 text-sm">Plateformes LMS, gestion d'établissements, outils pédagogiques numériques.</p>
+                </div>
+                
+                <!-- Secteur 2 -->
+                <div class="text-center fade-in-scroll">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <svg class="w-10 h-10 text-cyri-blue-light" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 21h18V10l-5 3-4-3-5 3V10L3 13v8z"/>
+                            <path d="M14 10h3V4h-3v6z"/>
+                            <path d="M7 10h3V4H7v6z"/>
+                          </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Industrie</h3>
+                    <p class="text-gray-600 text-sm">ERP/CRM industriels, IoT, optimisation des processus de production.</p>
+                </div>
+                
+                <!-- Secteur 3 -->
+                <div class="text-center fade-in-scroll">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <svg class="w-10 h-10 text-cyri-blue-light" fill="currentColor" viewBox="0 0 24 24">
+                            <!-- Roof -->
+                            <path d="M12 2L2 8v2h20V8l-10-6z"/>
+                            <!-- Building body -->
+                            <path d="M4 10h16v10H4V10z"/>
+                            <!-- Columns/windows -->
+                            <path d="M9 14h2v4H9v-4z"/>
+                            <path d="M13 14h2v4h-2v-4z"/>
+                          </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Administration</h3>
+                    <p class="text-gray-600 text-sm">Cahiers des charges publics, conformité réglementaire, dématérialisation.</p>
+                </div>
+                <!-- Secteur 4 -->
+                <div class="text-center fade-in-scroll">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <svg class="w-10 h-10 text-cyri-blue-light" fill="currentColor" viewBox="0 0 24 24">
+                            <circle cx="5" cy="12" r="2" />
+                            <circle cx="12" cy="12" r="2" />
+                            <circle cx="19" cy="12" r="2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Autre</h3>
+                    <p class="text-gray-600 text-sm">E-commerce et retail, Logistique et transport,Institutions financières,Assurance...</p>
+                </div>
+                
+            </div>
+          
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Témoignages clients</h2>
+                <p class="text-xl text-gray-600">Ils nous font confiance</p>
+            </div>
+            
+            <div class="relative max-w-4xl mx-auto">
+                <div id="testimonial-carousel" class="overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-track">
+                        <!-- Témoignage 1 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white p-8 rounded-xl shadow-lg">
+                                <div class="flex items-start space-x-6">
+                                    <!-- Photo du client -->
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    
+                                    <!-- Contenu du témoignage -->
+                                    <div class="flex-1">
+                                        <div class="mb-4">
+                                            <svg class="w-12 h-12 text-cyri-blue-light" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-lg text-gray-600 italic mb-6">
+                                            "We have worked with Mr. Alain AZONLIGNON many times and he proved that he can provide the best level of IT support and managed services in a friendly environment. He has L4 experience in the IT field, so he can manage
+                                            all types of IT services easily by himself and with his team. We will recommend his services."
+                                        </p>
+                                        <div class="border-t pt-4">
+                                            <h4 class="font-bold text-cyri-blue-dark">Sardar Ubaid Khan</h4>
+                                            <p class="text-gray-500">Operation Manager, SSE GLOBAL TECHNOLOGIES</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Témoignage 2 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white p-8 rounded-xl shadow-lg">
+                                <div class="flex items-start space-x-6">
+                                    <!-- Photo du client -->
+                                    <img src="./testimonial/nicolai.png" 
+                                        alt="JC Nicolai" 
+                                        class="client-photo">
+                                    
+                                    <!-- Contenu du témoignage -->
+                                    <div class="flex-1">
+                                        <div class="mb-4">
+                                            <svg class="w-12 h-12 text-cyri-blue-light" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-lg text-gray-600 italic mb-6">
+                                            "Parfaitement sérieux et excellente fiabilité."
+                                        </p>
+                                        <div class="border-t pt-4">
+                                            <h4 class="font-bold text-cyri-blue-dark">JC Nicolai</h4>
+                                            <p class="text-gray-500">Artiste peintre & photographe (Recherchez collaboration art, exposition, collection, presse, placement, sponsoring)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="flex justify-center mt-8 space-x-4">
+                    <button id="prev-testimonial" class="w-12 h-12 bg-cyri-blue-light text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <button id="next-testimonial" class="w-12 h-12 bg-cyri-blue-light text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- CTA Section -->
+    <section id="audit" class="py-20 bg-cyri-blue-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto fade-in-scroll">
+                <h2 class="text-4xl font-bold mb-6">Prêt à transformer votre IT ?</h2>
+                <p class="text-xl mb-8">
+                    Obtenez un audit gratuit de votre infrastructure et découvrez comment Cyritech peut optimiser votre système informatique.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-cyri-blue-light text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all">
+                        Demandez votre audit gratuit
+                    </a>
+                    <a href="services.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyri-blue-dark transition-all">
+                        Découvrir nos services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cyri-blue-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Cyritech Cloud Security § Loans</h3>
+                    <p class="text-gray-300 mb-4">
+                        NIU:CI-2024-0014238 N - RCCM: CI-ABJ-03-2024B13-089431
+                    </p>
+                    
+                </div>
+                
+                <!-- Navigation -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Liens utiles</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://lms.cyritech.com/" class="text-gray-300 hover:text-white transition-colors">Centre de monté en compétence</a></li>
+                        <li><a href="https://cyritech.com/ai/" class="text-gray-300 hover:text-white transition-colors">Cyritech AI</a></li>
+                        <li><a href="https://cyritech.com/virtualreality/" class="text-gray-300 hover:text-white transition-colors">Cyritech VR</a></li>
+                        <li><a href="https://cyritech.com/drones/" class="text-gray-300 hover:text-white transition-colors">Cyritech Drones</a></li>
+                        <li><a href="https://integrations.cyritech.com/" class="text-gray-300 hover:text-white transition-colors">Solution ERP/CRM zone UEMOA</a></li>
+                        <li><a href="rse.html" class="text-gray-300 hover:text-white transition-colors">Politique RSE</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                    <div class="space-y-3 text-gray-300">
+                        <p>🇨🇮 Côte d'Ivoire, +225 07 5909 5908</p>
+                        <p>🇧🇯 Bénin, +229 01 6508 5026</p>
+                        <p>🇱🇺 Luxembourg, +352 691 515 908</p>
+                        <p>🇧🇪 Belgique, +32 477 088 231</p>
+                        <p>🇳🇱 Pays-Bas, +31 684 290 386</p>
+                        <p>📧 info@cyritech.com</p>
+                      
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-300 mb-4 text-sm">
+                        Restez informés de nos actualités IT.
+                    </p>
+                    <form class="space-y-3">
+                        <input 
+                            type="email" 
+                            placeholder="Votre email"
+                            class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-cyri-blue-light focus:outline-none"
+                        >
+                        <button type="submit" class="w-full bg-cyri-blue-light text-white py-2 rounded-lg hover:bg-opacity-90 transition-all">
+                            S'abonner
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 <a href="index.html">Cyritech Cloud Security & Loans</a>. Tous droits réservés. Par  <a href="https://cyritech.com/alainazonlignon/">Alain AZONLIGNON</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed CTA Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="contact.html" class="bg-cyri-blue-dark text-white px-6 py-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all flex items-center space-x-2">
+            <span>Contactez un expert</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+            </svg>
+        </a>
+    </div>
+
+    
+    <script src="./main.js"></script>
+</body>
+</html>

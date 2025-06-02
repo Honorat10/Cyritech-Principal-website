@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cyritech Cloud Security & Loans</title>
+    <meta name="description" content="Contactez Cyritech pour votre audit gratuit. Présents à Cotonou, Paris, Abidjan, Bruxelles. Experts en cloud, cybersécurité et financement IT.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'jetbrains': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'cyri-blue-dark': '#1F2A44',
+                        'cyri-blue-light': '#3A8BCD',
+                        'cyri-red': '#B03031',
+                        'cyri-black': '#111111',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .fade-in-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-cyri-black">
+    <!-- Navigation -->
+    <nav class="bg-cyri-blue-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold">Cyritech</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-cyri-blue-light transition-colors">Accueil</a>
+                    <a href="about.html" class="hover:text-cyri-blue-light transition-colors">À propos</a>
+                    <a href="services.html" class="hover:text-cyri-blue-light transition-colors">Services</a>
+                    <a href="contact.html" class="text-cyri-blue-light">Contact</a>
+                    <a href="#contact-form" class="bg-cyri-blue-light text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Audit Gratuit</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="md:hidden hidden bg-cyri-blue-dark rounded-lg mt-2 p-4">
+                <a href="index.html" class="block text-white py-2 hover:text-cyri-blue-light">Accueil</a>
+                <a href="about.html" class="block text-white py-2 hover:text-cyri-blue-light">À propos</a>
+                <a href="services.html" class="block text-white py-2 hover:text-cyri-blue-light">Services</a>
+                <a href="contact.html" class="block text-cyri-blue-light py-2">Contact</a>
+                <a href="#contact-form" class="block bg-cyri-blue-light text-white py-2 px-4 rounded-lg mt-2 text-center">Audit Gratuit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-cyri-blue-dark to-cyri-blue-light text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl lg:text-6xl font-bold mb-6">Contactez-nous</h1>
+                <p class="text-xl lg:text-2xl mb-8">
+                    Prêt à transformer votre IT ? Commencez par un audit gratuit de votre infrastructure.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Réponse sous 2h ouvrées</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Audit gratuit inclus</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Support multilingue</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Form -->
+                <div class="fade-in-scroll">
+                    <h2 class="text-3xl font-bold text-cyri-blue-dark mb-8">Demandez votre audit gratuit</h2>
+                    
+                    <form action="envoyer_contact.php" method="POST" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="nom" class="block text-sm font-semibold text-cyri-black mb-2">Nom *</label>
+                                <input 
+                                    type="text" 
+                                    id="nom" 
+                                    name="nom" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-cyri-blue-light focus:outline-none transition-colors"
+                                    placeholder="Votre nom"
+                                >
+                            </div>
+                            <div>
+                                <label for="prenom" class="block text-sm font-semibold text-cyri-black mb-2">Prénom *</label>
+                                <input 
+                                    type="text" 
+                                    id="prenom" 
+                                    name="prenom" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-cyri-blue-light focus:outline-none transition-colors"
+                                    placeholder="Votre prénom"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-cyri-black mb-2">Email *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-cyri-blue-light focus:outline-none transition-colors"
+                                    placeholder="votre.email@entreprise.com"
+                                >
+                            </div>
+                            <div>
+                                <label for="telephone" class="block text-sm font-semibold text-cyri-black mb-2">Téléphone *</label>
+                                <input 
+                                    type="tel" 
+                                    id="telephone" 
+                                    name="telephone" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-cyri-blue-light focus:outline-none transition-colors"
+                                    placeholder="+229 XX XX XX XX"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="entreprise" class="block text-sm font-semibold text-cyri-black mb-2">Entreprise *</label>
+                                <input 
+                                    type="text" 
+                                    id="entreprise" 
+                                    name="entreprise" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-cyri-blue-light focus:outline-none transition-colors"
+                                    placeholder="Nom de votre entreprise"
+                                >
+                            </div>
+                            <div>
+                                <label for="secteur" class="block text-sm font-semibold text-cyri-black mb-2">Secteur d'activité *</label>
+                                <select 
+                                    id="secteur" 
+                                    name="secteur" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-cyri-blue-light focus:outline-none transition-colors"
+                                >
+                                    <option value="">Sélectionnez votre secteur</option>
+                                    <option value="medical">Médical / Santé</option>
+                                    <option value="education">Éducation</option>
+                                    <option value="industrie">Industrie / Manufacturing</option>
+                                    <option value="administration">Administration publique</option>
+                                    <option value="finance">Finance / Banque</option>
+                                    <option value="commerce">Commerce / Retail</option>
+                                    <option value="agriculture">Agriculture / Agroalimentaire</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="objet" class="block text-sm font-semibold text-cyri-black mb-2">Objet de votre demande *</label>
+                            <select 
+                                id="objet" 
+                                name="objet" 
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-cyri-blue-light focus:outline-none transition-colors"
+                            >
+                                <option value="">Sélectionnez l'objet</option>
+                                <option value="audit-gratuit">Audit sécurité gratuit</option>
+                                <option value="cloud-migration">Migration cloud</option>
+                                <option value="developpement">Développement logiciel</option>
+                                <option value="financement">Financement équipements IT</option>
+                                <option value="erp-dolibarr">ERP Dolibarr</option>
+                                <option value="support">Support & maintenance</option>
+                                <option value="consultation">Consultation IT</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-cyri-black mb-2">Message *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="6" 
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-cyri-blue-light focus:outline-none transition-colors resize-vertical"
+                                placeholder="Décrivez votre projet, vos besoins ou vos questions. Plus vous êtes précis, mieux nous pourrons vous conseiller."
+                            ></textarea>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="rgpd" name="rgpd" required class="mt-1 w-4 h-4 text-cyri-blue-light">
+                            <label for="rgpd" class="text-sm text-gray-600">
+                                J'accepte que mes données soient traitées conformément à la politique de confidentialité RGPD de Cyritech *
+                            </label>
+                        </div>
+                        
+                        <button 
+                            type="submit" 
+                            class="w-full bg-cyri-blue-light text-white py-4 px-8 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all"
+                        >
+                            Envoyer ma demande
+                        </button>
+                    </form>
+                    
+                    <div class="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                            <div>
+                                <h4 class="text-sm font-semibold text-green-800 mb-1">Confidentialité garantie</h4>
+                                <p class="text-sm text-green-700">
+                                    Vos données sont traitées en conformité stricte avec le RGPD. 
+                                    Elles ne seront jamais partagées avec des tiers et servent uniquement à vous répondre.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="fade-in-scroll">
+                    <div class="bg-gradient-to-br from-cyri-blue-dark to-cyri-blue-light rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-8">Nos coordonnées</h3>
+                        
+                        <div class="space-y-6">
+                            <!-- Cotonou -->
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3 flex items-center">
+                                    <span class="text-2xl mr-3">🇧🇯</span>
+                                    Cotonou, Bénin (Siège)
+                                </h4>
+                                <div class="space-y-2 text-sm pl-10">
+                                    <p>📍 Quartier Cadjehoun, Avenue des Cocotiers</p>
+                                    <p>📞 +229 XX XX XX XX</p>
+                                    <p>⏰ Lun-Ven: 8h-18h (GMT+1)</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Paris -->
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3 flex items-center">
+                                    <span class="text-2xl mr-3">🇫🇷</span>
+                                    Paris, France
+                                </h4>
+                                <div class="space-y-2 text-sm pl-10">
+                                    <p>📍 75008 Paris, Champs-Élysées</p>
+                                    <p>📞 +33 X XX XX XX XX</p>
+                                    <p>⏰ Lun-Ven: 9h-19h (CET)</p>
+                                </div>
+                            </div>
+                            
+                            <!-- General -->
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3">Contact général</h4>
+                                <div class="space-y-2 text-sm">
+                                    <p>📧 contact@cyritech.com</p>
+                                    <p>📧 audit@cyritech.com (audits)</p>
+                                    <p>📧 support@cyritech.com (urgences)</p>
+                                    <p>🌐 www.cyritech.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-white border-opacity-20">
+                            <h4 class="text-lg font-semibold mb-4">Suivez-nous</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Response Time Info -->
+                    <div class="mt-8 bg-gray-50 rounded-xl p-6">
+                        <h4 class="text-lg font-bold text-cyri-blue-dark mb-4">Temps de réponse</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Email</span>
+                                <span class="font-semibold text-cyri-blue-dark">&lt; 2h ouvrées</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Téléphone</span>
+                                <span class="font-semibold text-cyri-blue-dark">Immédiat</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Audit gratuit</span>
+                                <span class="font-semibold text-cyri-blue-dark">24-48h</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">Devis</span>
+                                <span class="font-semibold text-cyri-blue-dark">48-72h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in-scroll">
+                <h2 class="text-3xl font-bold text-cyri-blue-dark mb-4">Notre siège principal</h2>
+                <p class="text-gray-600">Cotonou, Bénin - Au cœur de l'Afrique de l'Ouest</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden fade-in-scroll">
+                    <div class="h-96">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126660.96225071518!2d2.2945397!3d6.3654295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102354e2a4bb5705%3A0x4a78e3de1faf4c14!2sCotonou%2C%20B%C3%A9nin!5e0!3m2!1sfr!2sfr!4v1635789123456!5m2!1sfr!2sfr"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid md:grid-cols-3 gap-4 text-center">
+                            <div>
+                                <h4 class="font-bold text-cyri-blue-dark mb-2">Adresse</h4>
+                                <p class="text-gray-600 text-sm">Quartier Cadjehoun<br>Avenue des Cocotiers<br>Cotonou, Bénin</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-cyri-blue-dark mb-2">Horaires</h4>
+                                <p class="text-gray-600 text-sm">Lundi - Vendredi<br>8h00 - 18h00<br>GMT+1</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-cyri-blue-dark mb-2">Transport</h4>
+                                <p class="text-gray-600 text-sm">Proche aéroport<br>Parking gratuit<br>Accès PMR</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center fade-in-scroll">
+                <h2 class="text-3xl font-bold text-cyri-blue-dark mb-6">Restez informés</h2>
+                <p class="text-gray-600 mb-8">
+                    Abonnez-vous à notre newsletter pour recevoir nos actualités IT, 
+                    conseils cybersécurité et offres spéciales.
+                </p>
+                
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input 
+                        type="email" 
+                        placeholder="Votre adresse email"
+                        class="flex-1 px-6 py-3 border border-gray-300 rounded-lg focus:border-cyri-blue-light focus:outline-none"
+                    >
+                    <button 
+                        type="submit"
+                        class="bg-cyri-blue-light text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all"
+                    >
+                        S'abonner
+                    </button>
+                </form>
+                
+                <p class="text-xs text-gray-500 mt-4">
+                    Nous respectons votre vie privée. Pas de spam, désinscription en un clic.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cyri-blue-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Cyritech</h3>
+                    <p class="text-gray-300 mb-4">
+                        Votre partenaire IT & Financement en Afrique et Europe.
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        Certification ISO/IEC 27001 en cours.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="rse.html" class="text-gray-300 hover:text-white transition-colors">Politique RSE</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                    <div class="space-y-3 text-gray-300">
+                        <p>🇧🇯 Cotonou, Bénin</p>
+                        <p>🇫🇷 Paris, France</p>
+                        <p>📧 contact@cyritech.com</p>
+                        <p>📞 +229 XX XX XX XX</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-300 mb-4 text-sm">
+                        Restez informés de nos actualités IT.
+                    </p>
+                    <form class="space-y-3">
+                        <input 
+                            type="email" 
+                            placeholder="Votre email"
+                            class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-cyri-blue-light focus:outline-none"
+                        >
+                        <button type="submit" class="w-full bg-cyri-blue-light text-white py-2 rounded-lg hover:bg-opacity-90 transition-all">
+                            S'abonner
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 Cyritech Cloud Security & Loans. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Form submission feedback
+        document.querySelector('form[action="envoyer_contact.php"]').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            
+            button.textContent = 'Envoi en cours...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.textContent = 'Message envoyé !';
+                button.classList.remove('bg-cyri-blue-light');
+                button.classList.add('bg-green-500');
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    button.classList.remove('bg-green-500');
+                    button.classList.add('bg-cyri-blue-light');
+                    this.reset();
+                }, 2000);
+            }, 1500);
+        });
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

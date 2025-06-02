@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Cyritech Cloud Security & Loans</title>
+    <meta name="description" content="Découvrez l'histoire, l'équipe et les valeurs de Cyritech. Présence en Afrique et Europe pour vos projets IT et financement.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css">
+
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'jetbrains': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'cyri-blue-dark': '#1F2A44',
+                        'cyri-blue-light': '#3A8BCD',
+                        'cyri-red': '#B03031',
+                        'cyri-black': '#111111',
+                    }
+                }
+            }
+        }
+    </script>
+    
+   
+</head>
+<body class="bg-white text-cyri-black">
+    <!-- Navigation -->
+    <nav id="navbar"class=" fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="./logo.png" alt=""  class="mt-7 logo">
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-cyri-blue-light transition-colors">Accueil</a>
+                    <a href="about.html" class="text-cyri-blue-light">À propos</a>
+                    <a href="services.html" class="hover:text-cyri-blue-light transition-colors">Services</a>
+                    <a href="contact.html" class="hover:text-cyri-blue-light transition-colors">Contact</a>
+                    <a href="contact.html" class="bg-cyri-blue-light text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Audit Gratuit</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="md:hidden hidden bg-cyri-blue-dark rounded-lg mt-2 p-4">
+                <a href="index.html" class="block text-white py-2 hover:text-cyri-blue-light">Accueil</a>
+                <a href="about.html" class="block text-cyri-blue-light py-2">À propos</a>
+                <a href="services.html" class="block text-white py-2 hover:text-cyri-blue-light">Services</a>
+                <a href="contact.html" class="block text-white py-2 hover:text-cyri-blue-light">Contact</a>
+                <a href="contact.html" class="block bg-cyri-blue-light text-white py-2 px-4 rounded-lg mt-2 text-center">Audit Gratuit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br  text-white py-20" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./testimonial/banière.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl lg:text-6xl font-bold mb-6">À propos de Cyritech</h1>
+                <p class="text-xl lg:text-2xl mb-8">
+                    Votre partenaire de confiance pour la transformation digitale en Afrique et Europe
+                </p>
+            </div>
+        </div>
+    </section>
+      <!-- Histoire et Vision -->
+
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 fade-in-scroll">
+                    <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Notre histoire</h2>
+                    <p class="text-xl text-gray-600">Une vision, une mission, des résultats</p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in-scroll">
+                        <h3 class="text-2xl font-bold text-cyri-blue-dark mb-6">Notre genèse</h3>
+                        <p class="text-gray-600 mb-6" style="text-align: justify;">
+                            Nous sommes CYRITECH Cloud Security & Loans, un cabinet indépendant spécialisé en IT, cybersécurité et gestion des risques.
+                            Nous allions technologies avancées, méthodologies solides et expertise ciblée pour protéger les intérêts de nos clients.
+
+                            Nos domaines d’action : développement d’applications, cybersécurité, hébergement web, infrastructure réseau, formation professionnelle, conseil IT et transformation digitale.
+                            Notre modèle repose sur le conseil, la vente de solutions technologiques, et des offres SaaS & cloud adaptées aux entreprises et institutions.
+                        </p>
+                        <p class="text-gray-600 mb-6" style="text-align: justify;">
+                            Fondée par <span style="color: #3b82f6"><a href="https://cyritech.com/alainazonlignon/">Alain AZONLIGNON</a></span>, consultant en technologies de l'information avec plus de 20 ans d'expérience 
+                            dans des entreprises de télécommunications et d'informatique en Europe et en Afrique, CYRITECH s’impose ainsi comme un acteur clé de la transformation digitale et de la cybersécurité, notamment sur les marchés des deux continents
+                        </p>
+                        
+                        
+                    </div>
+                    
+                    <div class="fade-in-scroll">
+                        <div class="bg-cyri-blue-light bg-opacity-10 rounded-2xl p-8">
+                            <h4 class="text-xl font-bold text-cyri-blue-dark mb-4">Notre vision</h4>
+                            <p class="text-gray-600 mb-6 italic">
+                                Être un partenaire stratégique en fournissant à nos clients un support complet pour atteindre leurs objectifs, grâce à des systèmes ERP-CRM intégrés et une formation continue du personnel via des LMS dédiés.
+                                Être aussi le pont technologique entre l'Afrique et l'Europe, en démocratisant l'accès aux technologies de pointe tout en respectant les spécificités locales.
+                                C’est là notre vision."
+                            </p>
+                            
+                            <h4 class="text-xl font-bold text-cyri-blue-dark mb-4">Notre mission</h4>
+                            <p class="text-gray-600">
+                                Nous nous engageons pleinement à accompagner nos clients dans l’adoption et l’intégration de solutions digitales sur mesure, conçues pour renforcer durablement leur position sur le marché. Notre approche vise à anticiper les défis de demain en préparant leur infrastructure numérique à évoluer en toute sécurité. Ainsi, nous garantissons non seulement la performance et l’efficacité de leurs outils numériques, mais aussi la protection optimale de leurs données et systèmes face 
+                                aux menaces croissantes. Notre mission est de bâtir avec eux un avenir digital solide, agile et sécurisé.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+   
+
+    <!-- Équipe -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Notre équipe</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Une équipe passionnée et expérimentée, présente sur deux continents...
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Membre 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center fade-in-scroll">
+                    <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                      <span class="text-white text-2xl font-bold"><img src="./teams/alain_azonlignon.png" alt=""></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-cyri-blue-dark mb-2">Alain AZONLIGNON</h3>
+                    <p class="text-cyri-blue-light font-medium mb-4">CEO & Fondateur</p>
+                    <div class="flex justify-center space-x-6 text-cyri-blue-light text-xl">
+                      <!-- Facebook -->
+                      <a href="https://web.facebook.com/Halain00/" target="_blank" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99h-2.4v-2.88h2.4v-2.2c0-2.37 1.42-3.69 3.6-3.69 1.04 0 2.13.19 2.13.19v2.35h-1.2c-1.18 0-1.55.73-1.55 1.48v1.88h2.64l-.42 2.88h-2.22v6.99A10 10 0 0022 12z"/>
+                        </svg>
+                      </a>
+                      <!-- LinkedIn -->
+                      <a href="https://www.linkedin.com/in/352691515908/" target="_blank" aria-label="LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M4.98 3.5a2.5 2.5 0 11.01 5.001 2.5 2.5 0 01-.01-5.001zM3 9h4v12H3zM9 9h3.75v1.64h.05c.52-.99 1.78-2.03 3.67-2.03 3.93 0 4.65 2.58 4.65 5.93V21H16v-5.46c0-1.3-.02-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V21H9z"/>
+                        </svg>
+                      </a>
+                      <!-- Carte de visite (Contact) -->
+                      <a href="https://linktr.ee/azonlignon" aria-label="Carte de visite">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M3 4a2 2 0 00-2 2v12a2 2 0 002 2h18a2 2 0 002-2V6a2 2 0 00-2-2H3zm0 2h18v2H3V6zm0 4h18v8H3v-8zm5 2a1 1 0 110 2 1 1 0 010-2z"/>
+                        </svg>
+                      </a>
+                    </div>
+                </div>
+                 <!-- Membre 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center fade-in-scroll">
+                    <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                      <span class="text-white text-2xl font-bold"><img src="./teams/Annick-1.png" alt=""></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-cyri-blue-dark mb-2">Annick N'GUESSAN</h3>
+                    <p class="text-cyri-blue-light font-medium mb-4">Digital Work Place Manager Abidjan</p>
+                    <div class="flex justify-center space-x-6 text-cyri-blue-light text-xl">
+                      <!-- Facebook -->
+                      <a href="https://web.facebook.com/profile.php?id=100007370535203&_rdc=1&_rdr#" target="_blank" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99h-2.4v-2.88h2.4v-2.2c0-2.37 1.42-3.69 3.6-3.69 1.04 0 2.13.19 2.13.19v2.35h-1.2c-1.18 0-1.55.73-1.55 1.48v1.88h2.64l-.42 2.88h-2.22v6.99A10 10 0 0022 12z"/>
+                        </svg>
+                      </a>
+                      <!-- LinkedIn -->
+                      <a href="https://www.linkedin.com/in/annick-n-guessan-538288182/" target="_blank" aria-label="LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M4.98 3.5a2.5 2.5 0 11.01 5.001 2.5 2.5 0 01-.01-5.001zM3 9h4v12H3zM9 9h3.75v1.64h.05c.52-.99 1.78-2.03 3.67-2.03 3.93 0 4.65 2.58 4.65 5.93V21H16v-5.46c0-1.3-.02-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V21H9z"/>
+                        </svg>
+                      </a>
+                    </div>
+                </div>
+                 <!-- Membre 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center fade-in-scroll">
+                    <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                      <span class="text-white text-2xl font-bold"><img src="./teams/honorat_sagbo.png" alt=""></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-cyri-blue-dark mb-2">Honorat SAGBO</h3>
+                    <p class="text-cyri-blue-light font-medium mb-4">Web Dev Trainee</p>
+                    <div class="flex justify-center space-x-6 text-cyri-blue-light text-xl">
+                      <!-- Facebook -->
+                      <a href="https://web.facebook.com/honorat.sagbo/" target="_blank" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99h-2.4v-2.88h2.4v-2.2c0-2.37 1.42-3.69 3.6-3.69 1.04 0 2.13.19 2.13.19v2.35h-1.2c-1.18 0-1.55.73-1.55 1.48v1.88h2.64l-.42 2.88h-2.22v6.99A10 10 0 0022 12z"/>
+                        </svg>
+                      </a>
+                      <!-- LinkedIn -->
+                      <a href="https://www.linkedin.com/in/honorat-sagbo-77949224b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M4.98 3.5a2.5 2.5 0 11.01 5.001 2.5 2.5 0 01-.01-5.001zM3 9h4v12H3zM9 9h3.75v1.64h.05c.52-.99 1.78-2.03 3.67-2.03 3.93 0 4.65 2.58 4.65 5.93V21H16v-5.46c0-1.3-.02-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V21H9z"/>
+                        </svg>
+                      </a>
+                    </div>
+                </div>
+                 <!-- Membre 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center fade-in-scroll">
+                    <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                      <span class="text-white text-2xl font-bold"><img src="./teams/Lewis-AMOU.png" alt=""></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-cyri-blue-dark mb-2">Lewis AMOU</h3>
+                    <p class="text-cyri-blue-light font-medium mb-4">Marketing Lead EU</p>
+                    <div class="flex justify-center space-x-6 text-cyri-blue-light text-xl">
+                      <!-- Facebook -->
+                      <a href="https://www.linkedin.com/In/352691515908/?_l=fr_FR" target="_blank" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99h-2.4v-2.88h2.4v-2.2c0-2.37 1.42-3.69 3.6-3.69 1.04 0 2.13.19 2.13.19v2.35h-1.2c-1.18 0-1.55.73-1.55 1.48v1.88h2.64l-.42 2.88h-2.22v6.99A10 10 0 0022 12z"/>
+                        </svg>
+                      </a>
+                     
+                    </div>
+                </div>
+                 <!-- Membre 5 -->
+                 <div class="bg-white p-8 rounded-xl shadow-sm text-center fade-in-scroll">
+                    <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                      <span class="text-white text-2xl font-bold"><img src="./teams//KIK1945-1.png" alt=""></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-cyri-blue-dark mb-2">Steve MACHIA</h3>
+                    <p class="text-cyri-blue-light font-medium mb-4">Designer UX / UI</p>
+                    <div class="flex justify-center space-x-6 text-cyri-blue-light text-xl">
+                      <!-- Facebook -->
+                      <a href="https://web.facebook.com/profile.php?id=100086339501293&_rdc=1&_rdr#" target="_blank" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99h-2.4v-2.88h2.4v-2.2c0-2.37 1.42-3.69 3.6-3.69 1.04 0 2.13.19 2.13.19v2.35h-1.2c-1.18 0-1.55.73-1.55 1.48v1.88h2.64l-.42 2.88h-2.22v6.99A10 10 0 0022 12z"/>
+                        </svg>
+                      </a>
+                     
+                    </div>
+                </div>
+                <!-- Membre 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center fade-in-scroll">
+                    <div class="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                      <span class="text-white text-2xl font-bold"><img src="./logo.png" alt=""></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-cyri-blue-dark mb-2">Nous rejoindre ?</h3>
+                    <p class="text-cyri-blue-light font-medium mb-4"><a href="#">Par ici</a></p>
+                    <div class="flex justify-center space-x-6 text-cyri-blue-light text-xl">
+                      <!-- Facebook -->
+                      <a href="https://web.facebook.com/cyritechnology" target="_blank" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99h-2.4v-2.88h2.4v-2.2c0-2.37 1.42-3.69 3.6-3.69 1.04 0 2.13.19 2.13.19v2.35h-1.2c-1.18 0-1.55.73-1.55 1.48v1.88h2.64l-.42 2.88h-2.22v6.99A10 10 0 0022 12z"/>
+                        </svg>
+                      </a>
+                      <!-- LinkedIn -->
+                      <a href="https://www.linkedin.com/company/cyritech" target="_blank" aria-label="LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M4.98 3.5a2.5 2.5 0 11.01 5.001 2.5 2.5 0 01-.01-5.001zM3 9h4v12H3zM9 9h3.75v1.64h.05c.52-.99 1.78-2.03 3.67-2.03 3.93 0 4.65 2.58 4.65 5.93V21H16v-5.46c0-1.3-.02-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V21H9z"/>
+                        </svg>
+                      </a>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Témoignages -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Témoignages clients</h2>
+                <p class="text-xl text-gray-600">Ils nous font confiance</p>
+            </div>
+            
+            <div class="relative max-w-4xl mx-auto">
+                <div id="testimonial-carousel" class="overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-track">
+                        <!--  1 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white p-8 rounded-xl shadow-lg">
+                                <div class="flex items-start space-x-6">
+                                    <!-- Photo du client -->
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                        <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                        <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    
+                                        
+                                    
+                                </div>
+                            </div>
+                        </div>
+                         <!--  2 -->
+                         <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white p-8 rounded-xl shadow-lg">
+                                <div class="flex items-start space-x-6">
+                                    <!-- Photo du client -->
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                        <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                        <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
+                                        alt="Sardar Ubaid Khan" 
+                                        class="client-photo">
+                                    
+                                        
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="flex justify-center mt-8 space-x-4">
+                    <button id="prev-testimonial" class="w-12 h-12 bg-cyri-blue-light text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <button id="next-testimonial" class="w-12 h-12 bg-cyri-blue-light text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Présence géographique -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Notre présence</h2>
+                <p class="text-xl text-gray-600">
+                    Afrique & Europe : une couverture géographique pour vous servir au plus près
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll">
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <h3 class="text-2xl font-bold text-cyri-blue-dark mb-6">Nos siège</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-sm font-bold">🇨🇮</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-cyri-blue-dark">Abidjan, Côte d'Ivoire</h4>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-sm font-bold">🇧🇯</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-cyri-blue-dark">Cotonou, Bénin</h4>
+                                </div>
+                            </div>
+                            
+                           
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-sm font-bold">🇱🇺</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-cyri-blue-dark">Luxembourg</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-sm font-bold">🇧🇪</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-cyri-blue-dark">Bruxelles, Belgique</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in-scroll">
+                    <div class="w-full h-96 bg-gray-200 rounded-xl flex items-center justify-center">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254236.51213477523!2d-4.144480591997204!3d5.348769970220831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5311959121%3A0x3fe70ddce19221a6!2sAbidjan%2C%20C%C3%B4te%20d&#39;Ivoire!5e0!3m2!1sfr!2sbj!4v1748868699042!5m2!1sfr!2sbj" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; border-radius: 12px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-cyri-blue-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto fade-in-scroll">
+                <h2 class="text-4xl font-bold mb-6">Rejoignez l'aventure Cyritech</h2>
+                <p class="text-xl mb-8">
+                    Vous partagez nos valeurs ? Vous voulez contribuer à la transformation digitale de l'Afrique ? 
+                    Nous recrutons des talents passionnés !
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-cyri-blue-light text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all">
+                        Nous contacter
+                    </a>
+                    <a href="services.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyri-blue-dark transition-all">
+                        Découvrir nos services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cyri-blue-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Cyritech</h3>
+                    <p class="text-gray-300 mb-4">
+                        Votre partenaire IT & Financement en Afrique et Europe.
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        Certification ISO/IEC 27001 en cours.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="rse.html" class="text-gray-300 hover:text-white transition-colors">Politique RSE</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                    <div class="space-y-3 text-gray-300">
+                        <p>🇧🇯 Cotonou, Bénin</p>
+                        <p>🇫🇷 Paris, France</p>
+                        <p>📧 contact@cyritech.com</p>
+                        <p>📞 +229 XX XX XX XX</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-300 mb-4 text-sm">
+                        Restez informés de nos actualités IT.
+                    </p>
+                    <form class="space-y-3">
+                        <input 
+                            type="email" 
+                            placeholder="Votre email"
+                            class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-cyri-blue-light focus:outline-none"
+                        >
+                        <button type="submit" class="w-full bg-cyri-blue-light text-white py-2 rounded-lg hover:bg-opacity-90 transition-all">
+                            S'abonner
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 Cyritech Cloud Security & Loans. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.getElementById("navbar");
+    
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.remove("bg-transparent");
+                    navbar.classList.add("bg-cyri-blue-dark", "text-white");
+                } else {
+                    navbar.classList.add("bg-transparent");
+                    navbar.classList.remove("bg-cyri-blue-dark", "text-white");
+                }
+            });
+        });
+    </script>
+    <script src="./main.js"></script>
+</body>
+</html>

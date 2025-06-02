@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique RSE - Cyritech Cloud Security & Loans</title>
+    <meta name="description" content="Découvrez nos engagements RSE : développement durable, éducation numérique en Afrique, recyclage IT et gouvernance éthique.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'jetbrains': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'cyri-blue-dark': '#1F2A44',
+                        'cyri-blue-light': '#3A8BCD',
+                        'cyri-red': '#B03031',
+                        'cyri-black': '#111111',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .fade-in-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-cyri-black">
+    <!-- Navigation -->
+    <nav class="bg-cyri-blue-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold">Cyritech</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-cyri-blue-light transition-colors">Accueil</a>
+                    <a href="about.html" class="hover:text-cyri-blue-light transition-colors">À propos</a>
+                    <a href="services.html" class="hover:text-cyri-blue-light transition-colors">Services</a>
+                    <a href="contact.html" class="hover:text-cyri-blue-light transition-colors">Contact</a>
+                    <a href="contact.html" class="bg-cyri-blue-light text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Audit Gratuit</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="md:hidden hidden bg-cyri-blue-dark rounded-lg mt-2 p-4">
+                <a href="index.html" class="block text-white py-2 hover:text-cyri-blue-light">Accueil</a>
+                <a href="about.html" class="block text-white py-2 hover:text-cyri-blue-light">À propos</a>
+                <a href="services.html" class="block text-white py-2 hover:text-cyri-blue-light">Services</a>
+                <a href="contact.html" class="block text-white py-2 hover:text-cyri-blue-light">Contact</a>
+                <a href="contact.html" class="block bg-cyri-blue-light text-white py-2 px-4 rounded-lg mt-2 text-center">Audit Gratuit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-green-600 to-green-800 text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl lg:text-6xl font-bold mb-6">Politique RSE</h1>
+                <p class="text-xl lg:text-2xl mb-8">
+                    Nos engagements pour un numérique responsable et inclusif en Afrique et Europe
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <span>Développement durable</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <span>Éducation numérique</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <span>Gouvernance éthique</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center fade-in-scroll">
+                <h2 class="text-3xl font-bold text-cyri-blue-dark mb-8">Nos engagements RSE</h2>
+                <p class="text-lg text-gray-600 mb-12">
+                    Chez Cyritech Cloud Security & Loans, nous croyons fermement que le développement technologique 
+                    doit s'accompagner d'une démarche responsable et inclusive. Notre politique RSE s'articule autour 
+                    de trois piliers fondamentaux : l'environnement, le social & l'éducation, ainsi que la gouvernance & l'éthique.
+                </p>
+                
+                <div class="grid lg:grid-cols-3 gap-8 text-left">
+                    <div class="bg-green-50 p-6 rounded-xl">
+                        <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-800 mb-3">Environnement</h3>
+                        <p class="text-green-700">
+                            Réduction de notre empreinte carbone et promotion de technologies durables.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-cyri-blue-dark mb-3">Social & Éducation</h3>
+                        <p class="text-cyri-blue-dark">
+                            Démocratisation de l'accès au numérique et formation des talents africains.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <div class="w-12 h-12 bg-cyri-blue-dark rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-cyri-blue-dark mb-3">Gouvernance & Éthique</h3>
+                        <p class="text-gray-600">
+                            Transparence, intégrité et respect des données dans toutes nos activités.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilier 1: Environnement -->
+    <section class="py-20 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl font-bold text-green-800">Pilier Environnement</h2>
+                    </div>
+                    
+                    <p class="text-lg text-green-700 mb-8">
+                        Nous nous engageons à minimiser l'impact environnemental de nos activités 
+                        tout en promouvant des solutions technologiques durables.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-green-800 mb-2">Data centers éco-responsables</h3>
+                                <p class="text-green-700">Partenariat avec des fournisseurs cloud utilisant 100% d'énergies renouvelables (AWS, Azure régions vertes)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-green-800 mb-2">Programme de recyclage IT</h3>
+                                <p class="text-green-700">Récupération et reconditionnement d'équipements informatiques en fin de vie pour redistribution dans les écoles</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-green-800 mb-2">Optimisation énergétique</h3>
+                                <p class="text-green-700">Conseil en architecture cloud pour réduire la consommation énergétique de 30% en moyenne</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-green-800 mb-2">Télétravail et mobilité douce</h3>
+                                <p class="text-green-700">Promotion du travail à distance et incitation aux transports écologiques pour nos équipes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in-scroll">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-green-800 mb-6">Objectifs 2025</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-700">Énergie verte</span>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-32 bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                    <span class="font-bold text-green-800">85%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-700">Matériel recyclé</span>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-32 bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div>
+                                    </div>
+                                    <span class="font-bold text-green-800">70%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-700">Réduction CO2</span>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-32 bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 60%"></div>
+                                    </div>
+                                    <span class="font-bold text-green-800">-40%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilier 2: Social & Éducation -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll order-2 lg:order-1">
+                    <div class="bg-gradient-to-br from-cyri-blue-light to-cyri-blue-dark rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">Nos actions concrètes</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold mb-2">Programme de bourses</h4>
+                                <p class="text-blue-100 text-sm">50 bourses/an pour des étudiants africains en informatique</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Ateliers de sensibilisation</h4>
+                                <p class="text-blue-100 text-sm">Cybersécurité et bonnes pratiques numériques dans les écoles</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Cyritech Academy</h4>
+                                <p class="text-blue-100 text-sm">Formation gratuite aux métiers du cloud pour les jeunes</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Mentorat technique</h4>
+                                <p class="text-blue-100 text-sm">Accompagnement de startups tech africaines</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in-scroll order-1 lg:order-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl font-bold text-cyri-blue-dark">Pilier Social & Éducation</h2>
+                    </div>
+                    
+                    <p class="text-lg text-gray-600 mb-8">
+                        Nous œuvrons pour démocratiser l'accès au numérique et former la prochaine génération 
+                        de talents tech africains.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Inclusion numérique</h3>
+                                <p class="text-gray-600">Réduction de la fracture numérique par des prix préférentiels pour les établissements d'enseignement</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Formation professionnelle</h3>
+                                <p class="text-gray-600">Programmes de certification AWS/Azure pour les jeunes diplômés africains</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Égalité des chances</h3>
+                                <p class="text-gray-600">Promotion de la mixité dans les métiers tech avec 40% de femmes dans nos équipes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Partenariats éducatifs</h3>
+                                <p class="text-gray-600">Collaboration avec universités africaines pour des cursus IT alignés sur les besoins du marché</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilier 3: Gouvernance & Éthique -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-cyri-blue-dark rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl font-bold text-cyri-blue-dark">Pilier Gouvernance & Éthique</h2>
+                    </div>
+                    
+                    <p class="text-lg text-gray-600 mb-8">
+                        Notre engagement envers la transparence, l'intégrité et le respect des réglementations 
+                        guide toutes nos décisions business.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-dark rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Protection des données</h3>
+                                <p class="text-gray-600">Conformité stricte RGPD/HIPAA avec chiffrement bout-en-bout et audits réguliers</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-dark rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Transparence financière</h3>
+                                <p class="text-gray-600">Publication annuelle de nos indicateurs RSE et impacts sociaux mesurables</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-dark rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Lutte anti-corruption</h3>
+                                <p class="text-gray-600">Politique zéro tolérance avec procédures de whistleblowing et formation des équipes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-dark rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Équité partenaires</h3>
+                                <p class="text-gray-600">Contrats équitables avec nos fournisseurs africains et délais de paiement respectés</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in-scroll">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-cyri-blue-dark mb-6">Certifications & Labels</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="w-12 h-12 bg-cyri-blue-dark rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-cyri-blue-dark">ISO/IEC 27001</h4>
+                                    <p class="text-gray-600 text-sm">En cours d'obtention (audit Q2 2025)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-cyri-blue-dark">RGPD Compliant</h4>
+                                    <p class="text-gray-600 text-sm">Certification obtenue (2023)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                                <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-cyri-blue-dark">Great Place to Work</h4>
+                                    <p class="text-gray-600 text-sm">Candidature déposée (2025)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Indicateurs chiffrés -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-3xl font-bold text-cyri-blue-dark mb-6">Nos indicateurs RSE 2024</h2>
+                <p class="text-xl text-gray-600">
+                    Des résultats concrets et mesurables de notre engagement
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-in-scroll">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-cyri-blue-dark text-white">
+                            <tr>
+                                <th class="px-6 py-4 text-left">Indicateur</th>
+                                <th class="px-6 py-4 text-center">2023</th>
+                                <th class="px-6 py-4 text-center">2024</th>
+                                <th class="px-6 py-4 text-center">Objectif 2025</th>
+                                <th class="px-6 py-4 text-center">Évolution</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Énergie verte utilisée (%)</td>
+                                <td class="px-6 py-4 text-center">65%</td>
+                                <td class="px-6 py-4 text-center font-bold text-green-600">78%</td>
+                                <td class="px-6 py-4 text-center">85%</td>
+                                <td class="px-6 py-4 text-center">
+                                    <span class="text-green-600 font-bold">+13%</span>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Bourses accordées (nombre)</td>
+                                <td class="px-6 py-4 text-center">32</td>
+                                <td class="px-6 py-4 text-center font-bold text-blue-600">47</td>
+                                <td class="px-6 py-4 text-center">50</td>
+                                <td class="px-6 py-4 text-center">
+                                    <span class="text-green-600 font-bold">+47%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Matériel IT recyclé (tonnes)</td>
+                                <td class="px-6 py-4 text-center">8.2</td>
+                                <td class="px-6 py-4 text-center font-bold text-green-600">12.7</td>
+                                <td class="px-6 py-4 text-center">15</td>
+                                <td class="px-6 py-4 text-center">
+                                    <span class="text-green-600 font-bold">+55%</span>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Femmes dans l'équipe (%)</td>
+                                <td class="px-6 py-4 text-center">35%</td>
+                                <td class="px-6 py-4 text-center font-bold text-purple-600">38%</td>
+                                <td class="px-6 py-4 text-center">40%</td>
+                                <td class="px-6 py-4 text-center">
+                                    <span class="text-green-600 font-bold">+3%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Émissions CO2 (tonnes eq.)</td>
+                                <td class="px-6 py-4 text-center">125</td>
+                                <td class="px-6 py-4 text-center font-bold text-orange-600">98</td>
+                                <td class="px-6 py-4 text-center">75</td>
+                                <td class="px-6 py-4 text-center">
+                                    <span class="text-green-600 font-bold">-22%</span>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Heures de formation gratuites</td>
+                                <td class="px-6 py-4 text-center">1,240</td>
+                                <td class="px-6 py-4 text-center font-bold text-blue-600">1,890</td>
+                                <td class="px-6 py-4 text-center">2,200</td>
+                                <td class="px-6 py-4 text-center">
+                                    <span class="text-green-600 font-bold">+52%</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-green-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto fade-in-scroll">
+                <h2 class="text-4xl font-bold mb-6">Rejoignez nos actions RSE</h2>
+                <p class="text-xl mb-8">
+                    Ensemble, construisons un avenir numérique responsable et inclusif. 
+                    Découvrez comment participer à nos initiatives.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all">
+                        Nous contacter
+                    </a>
+                    <a href="about.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-all">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cyri-blue-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Cyritech</h3>
+                    <p class="text-gray-300 mb-4">
+                        Votre partenaire IT & Financement en Afrique et Europe.
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        Certification ISO/IEC 27001 en cours.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="rse.html" class="text-gray-300 hover:text-white transition-colors">Politique RSE</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                    <div class="space-y-3 text-gray-300">
+                        <p>🇧🇯 Cotonou, Bénin</p>
+                        <p>🇫🇷 Paris, France</p>
+                        <p>📧 contact@cyritech.com</p>
+                        <p>📞 +229 XX XX XX XX</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-300 mb-4 text-sm">
+                        Restez informés de nos actualités IT.
+                    </p>
+                    <form class="space-y-3">
+                        <input 
+                            type="email" 
+                            placeholder="Votre email"
+                            class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-cyri-blue-light focus:outline-none"
+                        >
+                        <button type="submit" class="w-full bg-cyri-blue-light text-white py-2 rounded-lg hover:bg-opacity-90 transition-all">
+                            S'abonner
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 Cyritech Cloud Security & Loans. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
