@@ -1,87 +1,60 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - CYRI GROUP</title>
+    <title>Services & Produits - Cyritech Cloud Security & Loans</title>
+    <meta name="description" content="Découvrez nos services : Cloud, Cybersécurité, Développement, ERP Dolibarr, Financement IT. Solutions 360° pour votre transformation digitale.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="services.css">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        'jetbrains': ['JetBrains Mono', 'monospace'],
+                    },
                     colors: {
-                        'cyri-blue': {
-                            light: '#3B82F6',
-                            DEFAULT: '#1E40AF', 
-                            dark: '#1E3A8A'
-                        }
+                        'cyri-blue-dark': '#1F2A44',
+                        'cyri-blue-light': '#3A8BCD',
+                        'cyri-red': '#B03031',
+                        'cyri-black': '#111111',
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .navbar-scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
-        .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-    </style>
+    
+   
 </head>
-<body class="bg-gray-50">
+<body class="bg-white text-cyri-black">
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <h1 class="text-2xl font-bold text-cyri-blue-dark">CYRI GROUP</h1>
+    <nav id="navbar" class=" fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img src="./logo.png" alt=""  class="mt-7 logo">
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="navbar-link text-white hover:text-cyri-blue-light transition-colors" data-translate="nav.home">Accueil</a>
-                    <a href="about.html" class="navbar-link text-white hover:text-cyri-blue-light transition-colors" data-translate="nav.about">À propos</a>
-                    <a href="services.html" class="navbar-link text-white hover:text-cyri-blue-light transition-colors font-semibold border-b-2 border-cyri-blue-light" data-translate="nav.services">Services</a>
-                    <a href="contact.html" class="navbar-link text-white hover:text-cyri-blue-light transition-colors" data-translate="nav.contact">Contact</a>
-                    <a href="index.html#audit" class="bg-cyri-blue-light text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all" data-translate="nav.audit">Audit Gratuit</a>
-                    
-                    <!-- Language Selector Desktop -->
-                    <div class="relative">
-                        <button id="language-btn-desktop" class="flex items-center space-x-2 text-white hover:text-blue-200 transition-colors px-3 py-2 rounded-md hover:bg-blue-700">
-                            <span class="text-lg">🇫🇷</span>
-                            <span class="text-sm font-medium">FR</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div id="language-dropdown-desktop" class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border z-50 hidden">
-                            <button class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center space-x-2 first:rounded-t-lg" data-lang="fr">
-                                <span class="text-sm">🇫🇷</span>
-                                <span class="text-sm">Français</span>
-                            </button>
-                            <button class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center space-x-2" data-lang="en">
-                                <span class="text-sm">🇬🇧</span>
-                                <span class="text-sm">English</span>
-                            </button>
-                            <button class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center space-x-2 last:rounded-b-lg" data-lang="zh">
-                                <span class="text-sm">🇨🇳</span>
-                                <span class="text-sm">中文</span>
-                            </button>
-                        </div>
-                    </div>
+                    <a href="index.html" class="hover:text-cyri-blue-light transition-colors text-white ">Accueil</a>
+                    <a href="about.html" class="hover:text-cyri-blue-light transition-colors text-white ">À propos</a>
+                    <a href="services.html" class="text-cyri-blue-light">Services</a>
+                    <a href="contact.html" class="hover:text-cyri-blue-light transition-colors text-white ">Contact</a>
+                    <a href="contact.html" class="bg-cyri-blue-light text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Audit Gratuit</a>
                 </div>
                 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="navbar-mobile-btn text-white">
+                    <button id="mobile-menu-btn" class="text-white">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -89,221 +62,1013 @@
                 </div>
             </div>
             
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg rounded-lg mt-2">
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-cyri-blue-light" data-translate="nav.home">Accueil</a>
-                    <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-cyri-blue-light" data-translate="nav.about">À propos</a>
-                    <a href="services.html" class="block px-3 py-2 text-cyri-blue-dark font-semibold" data-translate="nav.services">Services</a>
-                    <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-cyri-blue-light" data-translate="nav.contact">Contact</a>
-                    <a href="index.html#audit" class="block px-3 py-2 bg-cyri-blue-light text-white rounded-lg mx-3 text-center" data-translate="nav.audit">Audit Gratuit</a>
-                    
-                    <!-- Language Selector Mobile -->
-                    <div class="px-3 py-2 border-t border-gray-200">
-                        <div class="text-sm text-gray-500 mb-2">Langue</div>
-                        <div class="flex space-x-3">
-                            <button class="flex items-center space-x-1 text-blue-600 font-semibold" data-lang="fr">
-                                <span>🇫🇷</span>
-                                <span class="text-sm">FR</span>
-                            </button>
-                            <button class="flex items-center space-x-1 text-gray-700 hover:text-blue-500" data-lang="en">
-                                <span>🇬🇧</span>
-                                <span class="text-sm">EN</span>
-                            </button>
-                            <button class="flex items-center space-x-1 text-gray-700 hover:text-blue-500" data-lang="zh">
-                                <span>🇨🇳</span>
-                                <span class="text-sm">ZH</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <div id="mobile-menu" class="md:hidden hidden bg-cyri-blue-dark rounded-lg mt-2 p-4">
+                <a href="index.html" class="block text-white py-2 hover:text-cyri-blue-light">Accueil</a>
+                <a href="about.html" class="block text-white py-2 hover:text-cyri-blue-light">À propos</a>
+                <a href="services.html" class="block text-cyri-blue-light py-2">Services</a>
+                <a href="contact.html" class="block text-white py-2 hover:text-cyri-blue-light">Contact</a>
+                <a href="contact.html" class="block bg-cyri-blue-light text-white py-2 px-4 rounded-lg mt-2 text-center">Audit Gratuit</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg pt-20 pb-16 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-translate="hero.title">Nos Services</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-translate="hero.subtitle">
-                Solutions informatiques complètes pour transformer votre entreprise
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 text-lg">
-                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">Abidjan</span>
-                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">Cotonou</span>
-                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">Luxembourg</span>
-                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">Bruxelles</span>
-                <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">Amsterdam</span>
+    <section class="bg-gradient-to-br from-cyri-blue-dark to-cyri-blue-light text-white py-20" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./testimonial/banière_service.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl lg:text-6xl font-bold mb-6">Services & Produits</h1>
+                <p class="text-xl lg:text-2xl mb-8">
+                    Des solutions sur mesure et des produits de qualité pour accélérer votre transformation digitale
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-cyri-blue-dark" data-translate="services.title">Nos Services</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+    <!-- Navigation sections -->
+    <section class="py-8 bg-gray-50 sticky top-10 z-40 fixed">
+        <div class="container mx-auto px-4">
+            <div class="flex overflow-x-auto space-x-4 pb-2">
+                <a href="#dev" class="nav-link whitespace-nowrap px-4 py-2 rounded-lg text-cyri-blue-dark hover:bg-cyri-blue-light hover:text-white transition-all" data-section="dev">Développement</a>
+                <a href="#cloud" class="nav-link whitespace-nowrap px-4 py-2 rounded-lg text-cyri-blue-dark hover:bg-cyri-blue-light hover:text-white transition-all" data-section="cloud">Cloud & Cyber</a>
+                <a href="#consulting" class="nav-link whitespace-nowrap px-4 py-2 rounded-lg text-cyri-blue-dark hover:bg-cyri-blue-light hover:text-white transition-all" data-section="consulting">Conseil IT</a>
+                <a href="#equipment" class="nav-link whitespace-nowrap px-4 py-2 rounded-lg text-cyri-blue-dark hover:bg-cyri-blue-light hover:text-white transition-all" data-section="equipment">Équipements</a>
+                <a href="#packs" class="nav-link whitespace-nowrap px-4 py-2 rounded-lg text-cyri-blue-dark hover:bg-cyri-blue-light hover:text-white transition-all" data-section="packs">Packs</a>
+                <a href="#support" class="nav-link whitespace-nowrap px-4 py-2 rounded-lg text-cyri-blue-dark hover:bg-cyri-blue-light hover:text-white transition-all" data-section="support">Support</a>
+                <a href="#erp" class="nav-link whitespace-nowrap px-4 py-2 rounded-lg text-cyri-blue-dark hover:bg-cyri-blue-light hover:text-white transition-all" data-section="erp">ERP/CRM</a>
+                <a href="#drone" class="nav-link whitespace-nowrap px-4 py-2 rounded-lg text-cyri-blue-dark hover:bg-cyri-blue-light hover:text-white transition-all" data-section="drone">Drônes</a>
+                <a href="#gaming" class="nav-link whitespace-nowrap px-4 py-2 rounded-lg text-cyri-blue-dark hover:bg-cyri-blue-light hover:text-white transition-all" data-section="gaming">Gamming</a>
+                <a href="#edbox" class="nav-link whitespace-nowrap px-4 py-2 rounded-lg text-cyri-blue-dark hover:bg-cyri-blue-light hover:text-white transition-all" data-section="edbox">EDBOX</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Développement logiciel -->
+    <section id="dev" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll">
+                    <h2 class="text-4xl font-bold text-cyri-blue-dark mb-8">Développement logiciel & applications</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Nous créons des applications sur mesure, sécurisées et scalables, adaptées à vos besoins métier spécifiques. 
+                        De l'analyse des besoins à la mise en production, nous vous accompagnons à chaque étape.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600">Applications web progressives (PWA)</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600">APIs REST et GraphQL sécurisées</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600">Applications mobiles hybrides</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600">Intégrations systèmes existants</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600">Tests automatisés et CI/CD</p>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.audit.title">Audit Informatique</h3>
-                    <p class="text-gray-600" data-translate="service.audit.desc">Évaluation complète de votre infrastructure IT pour identifier les points d'amélioration et optimiser vos performances.</p>
+                    
+                    <a href="contact.html" class="bg-cyri-blue-light text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                        Demandez un devis logiciel
+                    </a>
                 </div>
                 
-                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                <div class="fade-in-scroll">
+                    <div class="bg-gradient-to-br from-cyri-blue-dark to-cyri-blue-light rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">Technologies utilisées</h3>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <h4 class="font-semibold mb-2">Frontend</h4>
+                                <ul class="space-y-1 opacity-90">
+                                    <li>• HTML / CSS / JS </li>
+                                    <li>• Tailwind CSS / Bootstrap</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">Backend</h4>
+                                <ul class="space-y-1 opacity-90">
+                                    <li>• Node.js / Python / PHP</li>
+                                    <li>• MySQL / PostgreSQL / MongoDB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Cloud & Cybersécurité -->
+    <section id="cloud" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Cloud computing & cybersécurité</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Migration, sécurisation et optimisation de vos infrastructures cloud. Expertise AWS, Azure et Google Cloud.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Audit -->
+                <div class="bg-white p-8 rounded-xl shadow-sm fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.web.title">Développement Web</h3>
-                    <p class="text-gray-600" data-translate="service.web.desc">Création de sites web et applications web modernes, responsive et optimisées pour le référencement.</p>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Audit de sécurité</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm mb-6">
+                        <li>• Analyse de vulnérabilités</li>
+                        <li>• Tests d'intrusion</li>
+                        <li>• Conformité RGPD/HIPAA</li>
+                        <li>• Rapport détaillé</li>
+                    </ul>
                 </div>
                 
-                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                <!-- Architecture -->
+                <div class="bg-white p-8 rounded-xl shadow-sm fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.digital.title">Transformation Digitale</h3>
-                    <p class="text-gray-600" data-translate="service.digital.desc">Accompagnement stratégique pour moderniser vos processus et adopter les technologies innovantes.</p>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Architecture cloud</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm mb-6">
+                        <li>• Design multi-cloud</li>
+                        <li>• Haute disponibilité</li>
+                        <li>• Scalabilité automatique</li>
+                        <li>• Optimisation coûts</li>
+                    </ul>
                 </div>
                 
-                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                <!-- Migration -->
+                <div class="bg-white p-8 rounded-xl shadow-sm fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.security.title">Sécurité Informatique</h3>
-                    <p class="text-gray-600" data-translate="service.security.desc">Protection avancée de vos données et systèmes contre les menaces cybernétiques.</p>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Migration cloud</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm mb-6">
+                        <li>• Stratégie de migration</li>
+                        <li>• Réplication de données</li>
+                        <li>• Tests de performance</li>
+                        <li>• Formation équipes</li>
+                    </ul>
                 </div>
                 
-                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2m-2-4h.01M17 16h.01"></path>
+                <!-- Sécurité -->
+                <div class="bg-white p-8 rounded-xl shadow-sm fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-red rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.cloud.title">Infrastructure Cloud</h3>
-                    <p class="text-gray-600" data-translate="service.cloud.desc">Migration et gestion d'infrastructures cloud sécurisées pour optimiser vos coûts et performances.</p>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Sécurité & Monitoring</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm mb-6">
+                        <li>• Pare-feu nouvelle génération</li>
+                        <li>• Détection d'intrusions</li>
+                        <li>• Surveillance 24/7</li>
+                        <li>• Réponse aux incidents</li>
+                    </ul>
                 </div>
                 
-                <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                    <div class="w-12 h-12 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 11-9.75 9.75 9.75 9.75 0 019.75-9.75z"></path>
+                <!-- Optimisation -->
+                <div class="bg-white p-8 rounded-xl shadow-sm fade-in-scroll">
+                    <div class="w-16 h-16 bg-cyri-blue-light rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark" data-translate="service.support.title">Support Technique</h3>
-                    <p class="text-gray-600" data-translate="service.support.desc">Assistance technique 24/7 pour maintenir vos systèmes opérationnels et résoudre rapidement les incidents.</p>
+                    <h3 class="text-xl font-bold text-cyri-blue-dark mb-4">Optimisation</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm mb-6">
+                        <li>• Réduction des coûts</li>
+                        <li>• Performance tuning</li>
+                        <li>• Monitoring proactif</li>
+                        <li>• Recommandations</li>
+                    </ul>
+                </div>
+                
+                <!-- Infographie -->
+                <div class="bg-gradient-to-br from-cyri-blue-dark to-cyri-blue-light rounded-xl p-8 text-white fade-in-scroll">
+                    <h3 class="text-xl font-bold mb-6">Processus en 5 étapes</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-bold">1</span>
+                            </div>
+                            <span class="text-sm">Audit initial gratuit</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-bold">2</span>
+                            </div>
+                            <span class="text-sm">Architecture sur mesure</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-bold">3</span>
+                            </div>
+                            <span class="text-sm">Migration progressive</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-bold">4</span>
+                            </div>
+                            <span class="text-sm">Sécurisation complète</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                <span class="text-sm font-bold">5</span>
+                            </div>
+                            <span class="text-sm">Support continu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in-scroll">
+                <a href="contact.html" class="bg-cyri-blue-dark text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all">
+                    Demandez votre audit cloud
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Consultation IT -->
+    <section id="consulting" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll">
+                    <div class="w-20 h-20 bg-cyri-blue-light rounded-full flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold text-cyri-blue-dark mb-8">Consultation IT & pilotage de projet</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Nos consultants expérimentés vous accompagnent dans la définition de votre stratégie IT et le pilotage de vos projets de transformation digitale.
+                    </p>
+                </div>
+                
+                <div class="fade-in-scroll">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Stratégie digitale</h3>
+                                <p class="text-gray-600">Définition de roadmap technologique et business case ROI</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Gestion de projet</h3>
+                                <p class="text-gray-600">Méthodologies agiles, SCRUM, planification et suivi KPIs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Change management</h3>
+                                <p class="text-gray-600">Accompagnement du changement et formation des équipes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Gouvernance IT</h3>
+                                <p class="text-gray-600">ITIL, bonnes pratiques et optimisation des processus</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="contact.html" class="bg-cyri-blue-light text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                            Échangez avec un consultant
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Prêts & Équipements -->
+    <section id="equipment" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Prêts & vente d'équipements IT</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Financement et vente d'équipements informatiques professionnels. Traitement des dossiers sous 48h.
+                </p>
+            </div>
+            
+            <!-- Tableau équipements -->
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden mb-12 fade-in-scroll">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-cyri-blue-dark text-white">
+                            <tr>
+                                <th class="px-6 py-4 text-left">Équipement</th>
+                                <th class="px-6 py-4 text-left">Type</th>
+                                <th class="px-6 py-4 text-left">Modalité prêt</th>
+                                <th class="px-6 py-4 text-left">Durée</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4">Serveurs Dell/HP</td>
+                                <td class="px-6 py-4">Rack/Tower</td>
+                                <td class="px-6 py-4">Leasing 2-5 ans</td>
+                                <td class="px-6 py-4">24-60 mois</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4">Postes de travail</td>
+                                <td class="px-6 py-4">Desktop/Laptop</td>
+                                <td class="px-6 py-4">Location évolutive</td>
+                                <td class="px-6 py-4">12-36 mois</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">Équipements réseau</td>
+                                <td class="px-6 py-4">Switches/Routeurs</td>
+                                <td class="px-6 py-4">Achat/Leasing</td>
+                                <td class="px-6 py-4">36-60 mois</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4">Stockage</td>
+                                <td class="px-6 py-4">SAN/NAS</td>
+                                <td class="px-6 py-4">Leasing fiscal</td>
+                                <td class="px-6 py-4">36-84 mois</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">Périphériques</td>
+                                <td class="px-6 py-4">Imprimantes/Écrans</td>
+                                <td class="px-6 py-4">Location courte</td>
+                                <td class="px-6 py-4">6-24 mois</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Processus -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 bg-cyri-red rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586l-1 1V5H4v14h16v-2.586l1 1V20a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"/>
+                                <path d="M12 12a3 3 0 100-6 3 3 0 000 6z"/>
+                                <path d="M19 21a2 2 0 01-2-2V9h-2v10a2 2 0 01-2 2h-2v-4h-2v4H7a2 2 0 01-2-2V9H3v10a2 2 0 002 2h14z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-cyri-blue-dark">Processus en 4 étapes</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-white text-sm font-bold">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-cyri-blue-dark mb-1">Demande de devis</h4>
+                                <p class="text-gray-600 text-sm">Spécifications techniques et besoins métier</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-white text-sm font-bold">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-cyri-blue-dark mb-1">Étude financière</h4>
+                                <p class="text-gray-600 text-sm">Analyse de solvabilité et proposition tarifaire</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-white text-sm font-bold">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-cyri-blue-dark mb-1">Validation & commande</h4>
+                                <p class="text-gray-600 text-sm">Signature contrat et déclenchement approvisionnement</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-white text-sm font-bold">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-cyri-blue-dark mb-1">Livraison & installation</h4>
+                                <p class="text-gray-600 text-sm">Déploiement sur site et formation utilisateurs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in-scroll">
+                    <div class="bg-gradient-to-br from-cyri-red to-red-600 rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">Avantages du financement</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Préservation de trésorerie</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Déduction fiscale optimisée</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Évolution technologique</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Traitement rapide 48h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in-scroll">
+                <a href="contact.html" class="bg-cyri-red text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all">
+                    Obtenez un devis matériel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Packs Solutions -->
+    <section id="packs" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in-scroll">
+                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Packs « Solution Cloud & Cybersécurité »</h2>
+                <p class="text-xl text-gray-600">
+                    Offres packagées tout-en-un pour répondre à tous vos besoins
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Pack Starter -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden fade-in-scroll">
+                    <div class="bg-gray-50 p-6 text-center">
+                        <h3 class="text-2xl font-bold text-cyri-blue-dark mb-2">Digital Pro S</h3>
+                        <p class="text-gray-600 text-sm">Petite et moyenne entreprise</p>
+                        <div class="text-3xl font-bold text-cyri-blue-light mt-4">
+                            €890<span class="text-lg text-gray-500"></span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span> Audit numérique gratuit et rapport</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Refonte de site web</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Emails professionnels améliorés</span>
+                            </li>
+                           
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>ERP et CRM Dolibarr inclus</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Support 9h-18h</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pack Professional -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-cyri-blue-light fade-in-scroll">
+                    <div class="bg-cyri-blue-light p-6 text-center text-white">
+                        <h3 class="text-2xl font-bold mb-2">Peodigital N</h3>
+                        <p class="text-blue-100 text-sm">Nouvelle entreprise & startups </p>
+                        <div class="text-3xl font-bold mt-4">
+                            €1,890<span class="text-lg text-blue-200"></span>
+                        </div>
+                        
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Nom de domaine personnalisé</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Site web professionnel</span>
+                            </li>
+                          
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>ERP et CRM Dolibarr inclus</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>6 mois de Support technique</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pack Enterprise -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden fade-in-scroll">
+                    <div class="bg-cyri-blue-dark p-6 text-center text-white">
+                        <h3 class="text-2xl font-bold mb-2">Digital Pro Z</h3>
+                        <p class="text-gray-300 text-sm">Entreprises avec des exigences précises.</p>
+                        <div class="text-3xl font-bold mt-4">
+                            €3,890<span class="text-lg text-gray-300"></span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Consultation approfondie</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Étude de faisabilité</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Développement sur mesure et avancé</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Accompagnement continu</span>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in-scroll">
+                <a href="contact.html" class="bg-cyri-blue-light text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all">
+                    Choisissez votre pack
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Support & Résilience -->
+    <section id="support" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll">
+                    <div class="w-20 h-20 bg-cyri-red rounded-full flex items-center justify-center mb-8 shield-animation">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold text-cyri-blue-dark mb-8">Support & résilience / Reprise d'activité</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Garantie de continuité de service avec des SLA adaptés à vos enjeux business critiques.
+                    </p>
+                </div>
+                
+                <div class="fade-in-scroll">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Support technique 24/7</h3>
+                                <p class="text-gray-600">Équipe locale multilingue (français/anglais) disponible en permanence</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Plan de reprise d'activité (PRA)</h3>
+                                <p class="text-gray-600">RTO/RPO personnalisés selon criticité métier et budget</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Monitoring proactif</h3>
+                                <p class="text-gray-600">Surveillance continue et alertes automatiques</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">SLA garantis</h3>
+                                <p class="text-gray-600">99.5% à 99.9% selon niveau de service contractualisé</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="contact.html" class="bg-cyri-red text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                            Découvrez nos SLA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ERP/CRM Dolibarr -->
+    <section id="erp" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-scroll">
+                    <div class="w-20 h-20 bg-cyri-blue-light rounded-full flex items-center justify-center mb-8">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold text-cyri-blue-dark mb-8">Intégration LMS & ERP/CRM (Dolibarr)</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Spécialistes de l'ERP open-source Dolibarr et des plateformes LMS. 
+                        De l'étude de besoins à la formation de vos équipes.
+                    </p>
+                </div>
+                
+                <div class="fade-in-scroll">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-xs font-bold">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Étude de besoins</h3>
+                                <p class="text-gray-600">Analyse des processus métier et spécifications fonctionnelles</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-xs font-bold">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Installation & paramétrage</h3>
+                                <p class="text-gray-600">Déploiement Dolibarr, modules métier et personnalisations</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-xs font-bold">3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Migration des données</h3>
+                                <p class="text-gray-600">Import depuis Excel, anciens logiciels ou bases de données</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-white text-xs font-bold">4</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Formation & accompagnement</h3>
+                                <p class="text-gray-600">Sessions de formation utilisateurs et administrateurs</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="contact.html" class="bg-cyri-blue-light text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                            Demandez une démo Dolibarr
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Drones-->
+    <section id="drone" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-12 text-cyri-blue-dark">Vente de Drones</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./produits/DJI Inspire 3.png" alt="DJI Inspire 3" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark">DJI Inspire 3</h3>
+                        <p class="text-gray-600">L'Inspire 3 est un drone de cinéma professionnel doté d'un système de transmission vidéo HD, d'une nacelle rotative à 360° et d'une caméra 4K.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./produits/DJI Avata Pro-View.png" alt="DJI Avata Pro-View" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark">DJI Avata Pro-View</h3>
+                        <p class="text-gray-600">Le DJI Avata Pro-View Combo est équipé d'un capteur CMOS de 1/1,7 pouce, capable d'enregistrer des vidéos 4K à 60 images par seconde avec un champ de vision ultra-large de 155°.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./produits/Mavic Air 3.png" alt="Mavic Air 3" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-cyri-blue-dark">Mavic Air 3</h3>
+                        <p class="text-gray-600">
+                            Le Mavic 3 est équipé d'une caméra Hasselblad CMOS 4/3 capable de capturer des images fixes de 20 mégapixels et des vidéos en 5.1K à 50 images par seconde</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+    <!-- 9. Gamming-->
+    <section id="gaming" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-12 text-cyri-blue-dark">Équipement Gaming</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./produits/casque-removebg-preview.png" alt="Casque VR" class="">
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-cyri-blue-dark">Casques VR</h3>
+                        <p class="text-gray-600 text-sm">Réalité virtuelle immersive haute résolution.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./produits/vr-pic12.webp" alt="Manettes" class="">
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-cyri-blue-dark">Manettes Gaming</h3>
+                        <p class="text-gray-600 text-sm">Contrôleurs sans fil haute précision.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./produits/vr holder.png" alt="VR Holder" class="">
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-cyri-blue-dark">VR Holder</h3>
+                        <p class="text-gray-600 text-sm">Support ergonomique pour casques VR.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                            <img src="./produits/casque audio.webp" alt="Casque Bluetooth" class="">
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-cyri-blue-dark">Casques Bluetooth</h3>
+                        <p class="text-gray-600 text-sm">Audio sans fil haute qualité pour gaming.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+
+    <!-- 10. EDbox-->
+    <section id="edbox" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-12 text-cyri-blue-dark">EDBOX</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-r from-cyri-blue-dark to-cyri-blue-light rounded-xl p-8 text-white">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">Solution Éducative Innovante</h3>
+                                <p class="text-lg mb-6">Nous sommes <span style="color: #3b82f6;">vendeur officiel</span> de l'EDBOX, une solution complète pour l'éducation numérique, intégrant technologies modernes et pédagogie interactive.</p>
+                                <ul class="space-y-2 mb-6">
+                                    <li class="flex items-center">
+                                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Plateforme Moodle pour l'apprentissage interactive
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Nexcloud pour le stockage et le partage de fichiers
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Kiwix pour l'accès à des ressources éducatives hors ligne
+                                    </li>
+                                </ul>
+                                <a href="https://ed4free.org/edbox/" class="bg-white text-cyri-blue-dark px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                    Découvrir EDBOX
+                                </a>
+                            </div>
+                            <div class="h-64 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                                <img src="./produits/EDbox-routeur.png" alt="EDBOX Platform" class="w-full h-full object-cover rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+
+   
+
+    <!-- CTA Final -->
+    <section class="py-20 bg-cyri-blue-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto fade-in-scroll">
+                <h2 class="text-4xl font-bold mb-6">Prêt à démarrer votre projet ?</h2>
+                <p class="text-xl mb-8">
+                    Nos experts vous accompagnent de A à Z dans votre transformation digitale. 
+                    Audit gratuit pour commencer !
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-cyri-blue-light text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-all">
+                        Demandez votre audit gratuit
+                    </a>
+                    <a href="about.html" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyri-blue-dark transition-all">
+                        En savoir plus sur Cyritech
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="bg-cyri-blue-dark text-white py-16">
+        <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
                 <div>
-                    <h3 class="text-xl font-bold mb-4" data-translate="footer.company">CYRI GROUP</h3>
-                    <p class="text-gray-400" data-translate="footer.tagline">Votre partenaire technologique de confiance pour transformer votre entreprise.</p>
+                    <h3 class="text-xl font-bold mb-6">Cyritech Cloud Security § Loans</h3>
+                    <p class="text-gray-300 mb-4">
+                        NIU:CI-2024-0014238 N - RCCM: CI-ABJ-03-2024B13-089431
+                    </p>
+                    
                 </div>
+                
+                <!-- Navigation -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.services">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li data-translate="service.audit.title">Audit Informatique</li>
-                        <li data-translate="service.web.title">Développement Web</li>
-                        <li data-translate="service.security.title">Sécurité</li>
-                        <li data-translate="service.support.title">Support Technique</li>
+                    <h4 class="text-lg font-semibold mb-6">Liens utiles</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://lms.cyritech.com/" class="text-gray-300 hover:text-white transition-colors">Centre de monté en compétence</a></li>
+                        <li><a href="https://cyritech.com/ai/" class="text-gray-300 hover:text-white transition-colors">Cyritech AI</a></li>
+                        <li><a href="https://cyritech.com/virtualreality/" class="text-gray-300 hover:text-white transition-colors">Cyritech VR</a></li>
+                        <li><a href="https://cyritech.com/drones/" class="text-gray-300 hover:text-white transition-colors">Cyritech Drones</a></li>
+                        <li><a href="https://integrations.cyritech.com/" class="text-gray-300 hover:text-white transition-colors">Solution ERP/CRM zone UEMOA</a></li>
+                        <li><a href="rse.html" class="text-gray-300 hover:text-white transition-colors">Politique RSE</a></li>
                     </ul>
                 </div>
+                
+                <!-- Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.offices">Nos Bureaux</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>Abidjan, Côte d'Ivoire</li>
-                        <li>Cotonou, Bénin</li>
-                        <li>Luxembourg</li>
-                        <li>Bruxelles, Belgique</li>
-                        <li>Amsterdam, Pays-Bas</li>
-                    </ul>
+                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                    <div class="space-y-3 text-gray-300">
+                        <p>🇨🇮 Côte d'Ivoire, +225 07 5909 5908</p>
+                        <p>🇧🇯 Bénin, +229 01 6508 5026</p>
+                        <p>🇱🇺 Luxembourg, +352 691 515 908</p>
+                        <p>🇧🇪 Belgique, +32 477 088 231</p>
+                        <p>🇳🇱 Pays-Bas, +31 684 290 386</p>
+                        <p>📧 info@cyritech.com</p>
+                      
+                    </div>
                 </div>
+                
+                <!-- Newsletter -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.contact">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>info@cyrigroup.com</li>
-                        <li>+33 1 23 45 67 89</li>
-                    </ul>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-300 mb-4 text-sm">
+                        Restez informés de nos actualités IT.
+                    </p>
+                    <form class="space-y-3">
+                        <input 
+                            type="email" 
+                            placeholder="Votre email"
+                            class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:border-cyri-blue-light focus:outline-none"
+                        >
+                        <button type="submit" class="w-full bg-cyri-blue-light text-white py-2 rounded-lg hover:bg-opacity-90 transition-all">
+                            S'abonner
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p data-translate="footer.copyright">&copy; 2024 CYRI GROUP. Tous droits réservés.</p>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 <a href="index.html">Cyritech Cloud Security & Loans</a>. Tous droits réservés. Par  <a href="https://cyritech.com/alainazonlignon/">Alain AZONLIGNON</a>.
+                </p>
             </div>
         </div>
     </footer>
 
-    <script src="language-selector.js"></script>
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            const navbarLinks = document.querySelectorAll('.navbar-link');
-            const mobileBtn = document.querySelector('.navbar-mobile-btn');
-            
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-scrolled');
-                // Change links to black when scrolled (services page)
-                navbarLinks.forEach(link => {
-                    if (!link.classList.contains('border-b-2')) {
-                        link.classList.remove('text-white');
-                        link.classList.add('text-gray-700');
-                    }
-                });
-                if (mobileBtn) {
-                    mobileBtn.classList.remove('text-white');
-                    mobileBtn.classList.add('text-gray-700');
-                }
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-                // Change links to white when at top
-                navbarLinks.forEach(link => {
-                    link.classList.remove('text-gray-700');
-                    link.classList.add('text-white');
-                });
-                if (mobileBtn) {
-                    mobileBtn.classList.remove('text-gray-700');
-                    mobileBtn.classList.add('text-white');
-                }
-            }
-        });
-
-        // Language selector toggle (desktop)
-        const languageBtnDesktop = document.getElementById('language-btn-desktop');
-        const languageDropdownDesktop = document.getElementById('language-dropdown-desktop');
-        
-        languageBtnDesktop.addEventListener('click', () => {
-            languageDropdownDesktop.classList.toggle('hidden');
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!languageBtnDesktop.contains(event.target) && !languageDropdownDesktop.contains(event.target)) {
-                languageDropdownDesktop.classList.add('hidden');
-            }
-        });
-    </script>
+   <script src="./services.js"></script>
 </body>
 </html>

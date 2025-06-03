@@ -14,7 +14,8 @@
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./about.css">
+    
 
     
     <script>
@@ -35,11 +36,12 @@
         }
     </script>
     
+    
    
 </head>
 <body class="bg-white text-cyri-black">
     <!-- Navigation -->
-    <nav id="navbar"class=" fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
+    <nav id="navbar" class=" fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
@@ -47,10 +49,10 @@
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="hover:text-cyri-blue-light transition-colors">Accueil</a>
+                    <a href="index.html" class="hover:text-cyri-blue-light transition-colors text-white ">Accueil</a>
                     <a href="about.html" class="text-cyri-blue-light">À propos</a>
-                    <a href="services.html" class="hover:text-cyri-blue-light transition-colors">Services</a>
-                    <a href="contact.html" class="hover:text-cyri-blue-light transition-colors">Contact</a>
+                    <a href="services.html" class="hover:text-cyri-blue-light transition-colors text-white ">Services</a>
+                    <a href="contact.html" class="hover:text-cyri-blue-light transition-colors text-white ">Contact</a>
                     <a href="contact.html" class="bg-cyri-blue-light text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Audit Gratuit</a>
                 </div>
                 
@@ -74,7 +76,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br  text-white py-20" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./testimonial/banière.jpg');
+    <section class="bg-gradient-to-br from-cyri-blue-dark to-cyri-blue-light text-white py-20" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./testimonial/banière.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;">
@@ -282,109 +284,208 @@
         </div>
     </section>
 
-    
-    <!-- Témoignages -->
+        <!-- Client & partenaires -->
     <section class="py-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 fade-in-scroll">
-                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Témoignages clients</h2>
+                <h2 class="text-4xl font-bold text-cyri-blue-dark mb-6">Nos Clients & Partenaires</h2>
                 <p class="text-xl text-gray-600">Ils nous font confiance</p>
             </div>
             
-            <div class="relative max-w-4xl mx-auto">
-                <div id="testimonial-carousel" class="overflow-hidden">
-                    <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-track">
-                        <!--  1 -->
+            <!-- Carousel principal avec grille de logos -->
+            <div class="relative max-w-6xl mx-auto">
+                <div class="overflow-hidden rounded-2xl">
+                    <div id="logos-carousel" class="flex transition-transform duration-700 ease-in-out">
+                        
+                        <!-- Slide 1 - 8 logos -->
                         <div class="w-full flex-shrink-0 px-4">
-                            <div class="bg-white p-8 rounded-xl shadow-lg">
-                                <div class="flex items-start space-x-6">
-                                    <!-- Photo du client -->
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                        <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                        <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    
-                                        
-                                    
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                <div class="logo-container">
+                                    <img src="./clients/01.png" 
+                                         alt="croix rouge belgique" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/02.png" 
+                                         alt="Banque Européenne d'Investissement" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/03.png" 
+                                         alt="Eden Coiffure" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/04.png" 
+                                         alt="fond d'investissement Européen" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/05.png" 
+                                         alt="Futjisu" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/06.png" 
+                                         alt="jassens" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/07.png" 
+                                         alt="kpn" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/08.png" 
+                                         alt="onudi" 
+                                         class="client-logo">
                                 </div>
                             </div>
                         </div>
-                         <!--  2 -->
-                         <div class="w-full flex-shrink-0 px-4">
-                            <div class="bg-white p-8 rounded-xl shadow-lg">
-                                <div class="flex items-start space-x-6">
-                                    <!-- Photo du client -->
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                        <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                        <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    <img src="./testimonial/Sardar-Ubaid-Khan.png" 
-                                        alt="Sardar Ubaid Khan" 
-                                        class="client-photo">
-                                    
-                                        
-                                    
+                        
+                        <!-- Slide 2 - 8 autres logos -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                <div class="logo-container">
+                                    <img src="./clients/09.png" 
+                                         alt="scarlet" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/10.png" 
+                                         alt="tele2" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/11.png" 
+                                         alt="krom" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/12.png" 
+                                         alt="mobistar" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/13.png" 
+                                         alt="ue" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/14.png" 
+                                         alt="room" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/15.png" 
+                                         alt="proximus" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/16.png" 
+                                         alt="kob security" 
+                                         class="client-logo">
                                 </div>
                             </div>
                         </div>
-
                         
-                        
+                        <!-- Slide 3 - 8 autres logos -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                <div class="logo-container">
+                                    <img src="./clients/Atomconstruction Luxembourg.jpg" 
+                                         alt="atom" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/BGC.jpg" 
+                                         alt="bgc" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/consult_it_sarl_logo_small.jpg" 
+                                         alt="consult it" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/DELA1.png" 
+                                         alt="dela" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/dlc-strategies-1.jpg" 
+                                         alt="dlc" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/groupe auto.png" 
+                                         alt="groupe auto" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/Morning_ci.png" 
+                                         alt="morning group" 
+                                         class="client-logo">
+                                </div>
+                                <div class="logo-container">
+                                    <img src="./clients/Orange-and-Brown-Culinary-Kitchen-Logo-e1698433203251.png" 
+                                         alt="restaurant l'Ivoire" 
+                                         class="client-logo">
+                                </div>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>
                 
                 <!-- Navigation -->
                 <div class="flex justify-center mt-8 space-x-4">
-                    <button id="prev-testimonial" class="w-12 h-12 bg-cyri-blue-light text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all">
+                    <button id="prev-logos" class="w-12 h-12 bg-cyri-blue-light text-white rounded-full flex items-center justify-center hover:bg-cyri-blue-dark transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
                         </svg>
                     </button>
-                    <button id="next-testimonial" class="w-12 h-12 bg-cyri-blue-light text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all">
+                    
+                    <!-- Indicateurs -->
+                    <div class="flex items-center space-x-2" id="indicators">
+                        <div class="w-3 h-3 bg-cyri-blue-light rounded-full cursor-pointer indicator active transition-all duration-300" data-slide="0"></div>
+                        <div class="w-3 h-3 bg-gray-300 rounded-full cursor-pointer indicator transition-all duration-300" data-slide="1"></div>
+                        <div class="w-3 h-3 bg-gray-300 rounded-full cursor-pointer indicator transition-all duration-300" data-slide="2"></div>
+                    </div>
+                    
+                    <button id="next-logos" class="w-12 h-12 bg-cyri-blue-light text-white rounded-full flex items-center justify-center hover:bg-cyri-blue-dark transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
                         </svg>
                     </button>
                 </div>
             </div>
+            
+            <!-- Section avec défilement continu en bonus -->
+            <!-- <div class="mt-20">
+                <h3 class="text-2xl font-bold text-center text-cyri-blue-dark mb-10">Partenaires Certifiés</h3>
+                
+                <div class="relative overflow-hidden bg-white py-8 rounded-2xl shadow-lg">
+                    <div class="flex animate-scroll" style="width: 200%;">
+                   
+                        <div class="flex items-center justify-around w-1/2 space-x-12">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify" class="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        
+                        <div class="flex items-center justify-around w-1/2 space-x-12">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify" class="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </section>
 
@@ -485,37 +586,43 @@
     <footer class="bg-cyri-blue-dark text-white py-16">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
                 <div>
-                    <h3 class="text-xl font-bold mb-6">Cyritech</h3>
+                    <h3 class="text-xl font-bold mb-6">Cyritech Cloud Security § Loans</h3>
                     <p class="text-gray-300 mb-4">
-                        Votre partenaire IT & Financement en Afrique et Europe.
+                        NIU:CI-2024-0014238 N - RCCM: CI-ABJ-03-2024B13-089431
                     </p>
-                    <p class="text-sm text-gray-400">
-                        Certification ISO/IEC 27001 en cours.
-                    </p>
+                    
                 </div>
                 
+                <!-- Navigation -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-6">Navigation</h4>
+                    <h4 class="text-lg font-semibold mb-6">Liens utiles</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Accueil</a></li>
-                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">À propos</a></li>
-                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="https://lms.cyritech.com/" class="text-gray-300 hover:text-white transition-colors">Centre de monté en compétence</a></li>
+                        <li><a href="https://cyritech.com/ai/" class="text-gray-300 hover:text-white transition-colors">Cyritech AI</a></li>
+                        <li><a href="https://cyritech.com/virtualreality/" class="text-gray-300 hover:text-white transition-colors">Cyritech VR</a></li>
+                        <li><a href="https://cyritech.com/drones/" class="text-gray-300 hover:text-white transition-colors">Cyritech Drones</a></li>
+                        <li><a href="https://integrations.cyritech.com/" class="text-gray-300 hover:text-white transition-colors">Solution ERP/CRM zone UEMOA</a></li>
                         <li><a href="rse.html" class="text-gray-300 hover:text-white transition-colors">Politique RSE</a></li>
                     </ul>
                 </div>
                 
+                <!-- Contact -->
                 <div>
                     <h4 class="text-lg font-semibold mb-6">Contact</h4>
                     <div class="space-y-3 text-gray-300">
-                        <p>🇧🇯 Cotonou, Bénin</p>
-                        <p>🇫🇷 Paris, France</p>
-                        <p>📧 contact@cyritech.com</p>
-                        <p>📞 +229 XX XX XX XX</p>
+                        <p>🇨🇮 Côte d'Ivoire, +225 07 5909 5908</p>
+                        <p>🇧🇯 Bénin, +229 01 6508 5026</p>
+                        <p>🇱🇺 Luxembourg, +352 691 515 908</p>
+                        <p>🇧🇪 Belgique, +32 477 088 231</p>
+                        <p>🇳🇱 Pays-Bas, +31 684 290 386</p>
+                        <p>📧 info@cyritech.com</p>
+                      
                     </div>
                 </div>
                 
+                <!-- Newsletter -->
                 <div>
                     <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
                     <p class="text-gray-300 mb-4 text-sm">
@@ -536,7 +643,7 @@
             
             <div class="border-t border-gray-700 mt-12 pt-8 text-center">
                 <p class="text-gray-400">
-                    © 2025 Cyritech Cloud Security & Loans. Tous droits réservés.
+                    © 2025 <a href="index.html">Cyritech Cloud Security & Loans</a>. Tous droits réservés. Par  <a href="https://cyritech.com/alainazonlignon/">Alain AZONLIGNON</a>.
                 </p>
             </div>
         </div>
@@ -582,6 +689,7 @@
             });
         });
     </script>
-    <script src="./main.js"></script>
+    <script src="./about.js"></script>
+   
 </body>
 </html>
