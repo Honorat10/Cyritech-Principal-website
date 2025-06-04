@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos - Cyritech Cloud Security & Loans</title>
+    <title>À propos - Cyritech Cloud Security § Loans</title>
     <meta name="description" content="Découvrez l'histoire, l'équipe et les valeurs de Cyritech. Présence en Afrique et Europe pour vos projets IT et financement.">
     
     <!-- Google Fonts -->
@@ -14,7 +14,7 @@
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./about.css">
+    
     
 
     
@@ -36,12 +36,80 @@
         }
     </script>
     
-    
+    <style>
+        .logo{
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+         }
+        
+* {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+       
+       .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+        
+        .logo-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .client-logo {
+            max-width: 120px;
+            max-height: 70px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(60%) opacity(0.8);
+            transition: all 0.3s ease;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0%) opacity(1);
+            transform: scale(1.05);
+        }
+        
+        .fade-in-scroll {
+            opacity: 1;
+            transform: translateY(0);
+        }
+   
+
+
+   
+
+   
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .animate-scroll {
+            animation: scroll 15s linear infinite;
+        }
+        
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+ 
+    </style>
    
 </head>
 <body class="bg-white text-cyri-black">
     <!-- Navigation -->
-    <nav id="navbar" class=" fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
@@ -79,7 +147,7 @@
     <section class="bg-gradient-to-br from-cyri-blue-dark to-cyri-blue-light text-white py-20" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./testimonial/banière.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;">
+    background-attachment: fixed;"  >
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-5xl lg:text-6xl font-bold mb-6">À propos de Cyritech</h1>
@@ -103,7 +171,7 @@
                     <div class="fade-in-scroll">
                         <h3 class="text-2xl font-bold text-cyri-blue-dark mb-6">Notre genèse</h3>
                         <p class="text-gray-600 mb-6" style="text-align: justify;">
-                            Nous sommes CYRITECH Cloud Security & Loans, un cabinet indépendant spécialisé en IT, cybersécurité et gestion des risques.
+                            Nous sommes Cyritech Cloud Security § Loans, un cabinet indépendant spécialisé en IT, cybersécurité et gestion des risques.
                             Nous allions technologies avancées, méthodologies solides et expertise ciblée pour protéger les intérêts de nos clients.
 
                             Nos domaines d’action : développement d’applications, cybersécurité, hébergement web, infrastructure réseau, formation professionnelle, conseil IT et transformation digitale.
@@ -548,7 +616,7 @@
                 <div class="fade-in-scroll">
                     <div class="w-full h-96 bg-gray-200 rounded-xl flex items-center justify-center">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254236.51213477523!2d-4.144480591997204!3d5.348769970220831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5311959121%3A0x3fe70ddce19221a6!2sAbidjan%2C%20C%C3%B4te%20d&#39;Ivoire!5e0!3m2!1sfr!2sbj!4v1748868699042!5m2!1sfr!2sbj" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254236.51213477523!2d-4.144480591997204!3d5.348769970220831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5311959121%3A0x3fe70ddce19221a6!2sAbidjan%2C%20C%C3%B4te%20d&#39;Ivoire!5e0!3m2!1sfr!2sbj!4v1748868699042!5m2!1sfr!2sbj" 
                             width="100%" 
                             height="100%" 
                             style="border:0; border-radius: 12px;" 
@@ -643,18 +711,34 @@
             
             <div class="border-t border-gray-700 mt-12 pt-8 text-center">
                 <p class="text-gray-400">
-                    © 2025 <a href="index.html">Cyritech Cloud Security & Loans</a>. Tous droits réservés. Par  <a href="https://cyritech.com/alainazonlignon/">Alain AZONLIGNON</a>.
+                    © 2025 <a href="index.html">Cyritech Cloud Security § Loans</a>. Tous droits réservés. Par  <a href="https://cyritech.com/alainazonlignon/">Alain AZONLIGNON</a>.
                 </p>
             </div>
         </div>
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.getElementById("navbar");
+    
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.remove("bg-transparent");
+                    navbar.classList.add("bg-cyri-blue-dark", "text-white");
+                } else {
+                    navbar.classList.add("bg-transparent");
+                    navbar.classList.remove("bg-cyri-blue-dark", "text-white");
+                }
+            });
+        });
+    </script>
+    <script>
         // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
+        
         
         // Scroll animations
         const observerOptions = {
@@ -674,22 +758,8 @@
             observer.observe(el);
         });
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const navbar = document.getElementById("navbar");
+   
     
-            window.addEventListener("scroll", function () {
-                if (window.scrollY > 50) {
-                    navbar.classList.remove("bg-transparent");
-                    navbar.classList.add("bg-cyri-blue-dark", "text-white");
-                } else {
-                    navbar.classList.add("bg-transparent");
-                    navbar.classList.remove("bg-cyri-blue-dark", "text-white");
-                }
-            });
-        });
-    </script>
-    <script src="./about.js"></script>
    
 </body>
 </html>

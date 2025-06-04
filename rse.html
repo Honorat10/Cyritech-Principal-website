@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique RSE - Cyritech Cloud Security & Loans</title>
+    <title>Politique RSE - Cyritech Cloud Security § Loans</title>
     <meta name="description" content="Découvrez nos engagements RSE : développement durable, éducation numérique en Afrique, recyclage IT et gouvernance éthique.">
     
     <!-- Google Fonts -->
@@ -34,6 +34,11 @@
     </script>
     
     <style>
+         .logo{
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+         }
         * {
             font-family: 'JetBrains Mono', monospace;
         }
@@ -52,18 +57,18 @@
 </head>
 <body class="bg-white text-cyri-black">
     <!-- Navigation -->
-    <nav class="bg-cyri-blue-dark text-white">
+    <nav id="navbar" class=" fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <span class="text-xl font-bold">Cyritech</span>
+                    <img src="./logo.png" alt=""  class="mt-7 logo">
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="hover:text-cyri-blue-light transition-colors">Accueil</a>
-                    <a href="about.html" class="hover:text-cyri-blue-light transition-colors">À propos</a>
-                    <a href="services.html" class="hover:text-cyri-blue-light transition-colors">Services</a>
-                    <a href="contact.html" class="hover:text-cyri-blue-light transition-colors">Contact</a>
+                    <a href="index.html" class="hover:text-cyri-blue-light transition-colors text-white">Accueil</a>
+                    <a href="about.html" class="hover:text-cyri-blue-light transition-colors text-white">À propos</a>
+                    <a href="services.html" class="hover:text-cyri-blue-light transition-colors text-white">Services</a>
+                    <a href="contact.html" class="hover:text-cyri-blue-light transition-colors text-white">Contact</a>
                     <a href="contact.html" class="bg-cyri-blue-light text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all">Audit Gratuit</a>
                 </div>
                 
@@ -87,7 +92,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-green-600 to-green-800 text-white py-20">
+    <section class="bg-gradient-to-br from-green-600 to-green-800 text-white py-20" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./testimonial/baniere_rse.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-5xl lg:text-6xl font-bold mb-6">Politique RSE</h1>
@@ -124,9 +132,8 @@
             <div class="max-w-4xl mx-auto text-center fade-in-scroll">
                 <h2 class="text-3xl font-bold text-cyri-blue-dark mb-8">Nos engagements RSE</h2>
                 <p class="text-lg text-gray-600 mb-12">
-                    Chez Cyritech Cloud Security & Loans, nous croyons fermement que le développement technologique 
-                    doit s'accompagner d'une démarche responsable et inclusive. Notre politique RSE s'articule autour 
-                    de trois piliers fondamentaux : l'environnement, le social & l'éducation, ainsi que la gouvernance & l'éthique.
+                    Chez CYRITECH Cloud Security & Loans, nous intégrons les principes du développement durable et de la responsabilité sociétale dans toutes nos activités. Notre politique RSE repose sur trois piliers 
+                    fondamentaux : l’impact environnemental, l’engagement social puis la gouvernance et l’éthique.
                 </p>
                 
                 <div class="grid lg:grid-cols-3 gap-8 text-left">
@@ -197,8 +204,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-green-800 mb-2">Data centers éco-responsables</h3>
-                                <p class="text-green-700">Partenariat avec des fournisseurs cloud utilisant 100% d'énergies renouvelables (AWS, Azure régions vertes)</p>
+                                <h3 class="text-xl font-bold text-green-800 mb-2">Optimisation de la consommation énergétique</h3>
+                                <p class="text-green-700">Privilégier les datacenters écoresponsables et adopter des pratiques de gestion de l’énergie dans nos infrastructures.</p>
                             </div>
                         </div>
                         
@@ -221,8 +228,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-green-800 mb-2">Optimisation énergétique</h3>
-                                <p class="text-green-700">Conseil en architecture cloud pour réduire la consommation énergétique de 30% en moyenne</p>
+                                <h3 class="text-xl font-bold text-green-800 mb-2">Dématérialisation des processus</h3>
+                                <p class="text-green-700"> Encourager la digitalisation des documents et des opérations afin de réduire l’utilisation de papier et la production de déchets.</p>
                             </div>
                         </div>
                         
@@ -233,8 +240,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-green-800 mb-2">Télétravail et mobilité douce</h3>
-                                <p class="text-green-700">Promotion du travail à distance et incitation aux transports écologiques pour nos équipes</p>
+                                <h3 class="text-xl font-bold text-green-800 mb-2">Sensibilisation et formation</h3>
+                                <p class="text-green-700">Organiser des formations sur l’impact environnemental du numérique et promouvoir les bonnes pratiques auprès de nos employés et partenaires.</p>
                             </div>
                         </div>
                     </div>
@@ -287,20 +294,20 @@
                         <h3 class="text-2xl font-bold mb-6">Nos actions concrètes</h3>
                         <div class="space-y-6">
                             <div>
-                                <h4 class="font-bold mb-2">Programme de bourses</h4>
-                                <p class="text-blue-100 text-sm">50 bourses/an pour des étudiants africains en informatique</p>
+                                <h4 class="font-bold mb-2">Lutte contre la précarité numérique</h4>
+                                <p class="text-blue-100 text-sm">Création du Club 53 LESKMF pour permettre aux populations vulnérables d’accéder aux technologies et aux formations en cybersécurité et en informatique.</p>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-2">Ateliers de sensibilisation</h4>
-                                <p class="text-blue-100 text-sm">Cybersécurité et bonnes pratiques numériques dans les écoles</p>
+                                <h4 class="font-bold mb-2">Éducation et formation</h4>
+                                <p class="text-blue-100 text-sm">Développement de formations en cloud, cybersécurité et gestion des risques pour accompagner les talents africains notamment via <span style="color: #3b82f6;"><a href="https://afrikacademy.com/">Afrik'Academy</a></span>.</p>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-2">Cyritech Academy</h4>
-                                <p class="text-blue-100 text-sm">Formation gratuite aux métiers du cloud pour les jeunes</p>
+                                <h4 class="font-bold mb-2">Soutien aux entrepreneurs et startups</h4>
+                                <p class="text-blue-100 text-sm">Collaboration avec des jeunes entreprises technologiques et des porteurs de projets innovants pour renforcer l’écosystème numérique.</p>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-2">Mentorat technique</h4>
-                                <p class="text-blue-100 text-sm">Accompagnement de startups tech africaines</p>
+                                <h4 class="font-bold mb-2">Actions solidaires et engagements philanthropiques</h4>
+                                <p class="text-blue-100 text-sm">Soutien à des initiatives locales en matière de santé, d’éducation et d’innovation sociale.</p>
                             </div>
                         </div>
                     </div>
@@ -322,53 +329,7 @@
                     </p>
                     
                     <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Inclusion numérique</h3>
-                                <p class="text-gray-600">Réduction de la fracture numérique par des prix préférentiels pour les établissements d'enseignement</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Formation professionnelle</h3>
-                                <p class="text-gray-600">Programmes de certification AWS/Azure pour les jeunes diplômés africains</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Égalité des chances</h3>
-                                <p class="text-gray-600">Promotion de la mixité dans les métiers tech avec 40% de femmes dans nos équipes</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-cyri-blue-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Partenariats éducatifs</h3>
-                                <p class="text-gray-600">Collaboration avec universités africaines pour des cursus IT alignés sur les besoins du marché</p>
-                            </div>
-                        </div>
+                        <img src="./testimonial/social.png" alt="">
                     </div>
                 </div>
             </div>
@@ -402,8 +363,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Protection des données</h3>
-                                <p class="text-gray-600">Conformité stricte RGPD/HIPAA avec chiffrement bout-en-bout et audits réguliers</p>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Respect des normes et réglementations</h3>
+                                <p class="text-gray-600">Conformité aux réglementations en vigueur en matière de protection des données, de cybersécurité et de conformité financière.</p>
                             </div>
                         </div>
                         
@@ -414,8 +375,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Transparence financière</h3>
-                                <p class="text-gray-600">Publication annuelle de nos indicateurs RSE et impacts sociaux mesurables</p>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Protection des données et cybersécurité</h3>
+                                <p class="text-gray-600">Garantie de la confidentialité, de l’intégrité et de la disponibilité des informations de nos clients et partenaires.</p>
                             </div>
                         </div>
                         
@@ -438,8 +399,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Équité partenaires</h3>
-                                <p class="text-gray-600">Contrats équitables avec nos fournisseurs africains et délais de paiement respectés</p>
+                                <h3 class="text-xl font-bold text-cyri-blue-dark mb-2">Égalité des chances et diversité</h3>
+                                <p class="text-gray-600">Environnement inclusif, garantissant l’égalité des chances sans discrimination.</p>
                             </div>
                         </div>
                     </div>
@@ -491,89 +452,7 @@
         </div>
     </section>
 
-    <!-- Indicateurs chiffrés -->
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 fade-in-scroll">
-                <h2 class="text-3xl font-bold text-cyri-blue-dark mb-6">Nos indicateurs RSE 2024</h2>
-                <p class="text-xl text-gray-600">
-                    Des résultats concrets et mesurables de notre engagement
-                </p>
-            </div>
-            
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-in-scroll">
-                <div class="overflow-x-auto">
-                    <table class="w-full">
-                        <thead class="bg-cyri-blue-dark text-white">
-                            <tr>
-                                <th class="px-6 py-4 text-left">Indicateur</th>
-                                <th class="px-6 py-4 text-center">2023</th>
-                                <th class="px-6 py-4 text-center">2024</th>
-                                <th class="px-6 py-4 text-center">Objectif 2025</th>
-                                <th class="px-6 py-4 text-center">Évolution</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            <tr>
-                                <td class="px-6 py-4 font-semibold">Énergie verte utilisée (%)</td>
-                                <td class="px-6 py-4 text-center">65%</td>
-                                <td class="px-6 py-4 text-center font-bold text-green-600">78%</td>
-                                <td class="px-6 py-4 text-center">85%</td>
-                                <td class="px-6 py-4 text-center">
-                                    <span class="text-green-600 font-bold">+13%</span>
-                                </td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="px-6 py-4 font-semibold">Bourses accordées (nombre)</td>
-                                <td class="px-6 py-4 text-center">32</td>
-                                <td class="px-6 py-4 text-center font-bold text-blue-600">47</td>
-                                <td class="px-6 py-4 text-center">50</td>
-                                <td class="px-6 py-4 text-center">
-                                    <span class="text-green-600 font-bold">+47%</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 font-semibold">Matériel IT recyclé (tonnes)</td>
-                                <td class="px-6 py-4 text-center">8.2</td>
-                                <td class="px-6 py-4 text-center font-bold text-green-600">12.7</td>
-                                <td class="px-6 py-4 text-center">15</td>
-                                <td class="px-6 py-4 text-center">
-                                    <span class="text-green-600 font-bold">+55%</span>
-                                </td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="px-6 py-4 font-semibold">Femmes dans l'équipe (%)</td>
-                                <td class="px-6 py-4 text-center">35%</td>
-                                <td class="px-6 py-4 text-center font-bold text-purple-600">38%</td>
-                                <td class="px-6 py-4 text-center">40%</td>
-                                <td class="px-6 py-4 text-center">
-                                    <span class="text-green-600 font-bold">+3%</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 font-semibold">Émissions CO2 (tonnes eq.)</td>
-                                <td class="px-6 py-4 text-center">125</td>
-                                <td class="px-6 py-4 text-center font-bold text-orange-600">98</td>
-                                <td class="px-6 py-4 text-center">75</td>
-                                <td class="px-6 py-4 text-center">
-                                    <span class="text-green-600 font-bold">-22%</span>
-                                </td>
-                            </tr>
-                            <tr class="bg-gray-50">
-                                <td class="px-6 py-4 font-semibold">Heures de formation gratuites</td>
-                                <td class="px-6 py-4 text-center">1,240</td>
-                                <td class="px-6 py-4 text-center font-bold text-blue-600">1,890</td>
-                                <td class="px-6 py-4 text-center">2,200</td>
-                                <td class="px-6 py-4 text-center">
-                                    <span class="text-green-600 font-bold">+52%</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <!-- CTA Section -->
     <section class="py-20 bg-green-600 text-white">
@@ -600,37 +479,43 @@
     <footer class="bg-cyri-blue-dark text-white py-16">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
                 <div>
-                    <h3 class="text-xl font-bold mb-6">Cyritech</h3>
+                    <h3 class="text-xl font-bold mb-6">Cyritech Cloud Security § Loans</h3>
                     <p class="text-gray-300 mb-4">
-                        Votre partenaire IT & Financement en Afrique et Europe.
+                        NIU:CI-2024-0014238 N - RCCM: CI-ABJ-03-2024B13-089431
                     </p>
-                    <p class="text-sm text-gray-400">
-                        Certification ISO/IEC 27001 en cours.
-                    </p>
+                    
                 </div>
                 
+                <!-- Navigation -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-6">Navigation</h4>
+                    <h4 class="text-lg font-semibold mb-6">Liens utiles</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Accueil</a></li>
-                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">À propos</a></li>
-                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="https://lms.cyritech.com/" class="text-gray-300 hover:text-white transition-colors">Centre de monté en compétence</a></li>
+                        <li><a href="https://cyritech.com/ai/" class="text-gray-300 hover:text-white transition-colors">Cyritech AI</a></li>
+                        <li><a href="https://cyritech.com/virtualreality/" class="text-gray-300 hover:text-white transition-colors">Cyritech VR</a></li>
+                        <li><a href="https://cyritech.com/drones/" class="text-gray-300 hover:text-white transition-colors">Cyritech Drones</a></li>
+                        <li><a href="https://integrations.cyritech.com/" class="text-gray-300 hover:text-white transition-colors">Solution ERP/CRM zone UEMOA</a></li>
                         <li><a href="rse.html" class="text-gray-300 hover:text-white transition-colors">Politique RSE</a></li>
                     </ul>
                 </div>
                 
+                <!-- Contact -->
                 <div>
                     <h4 class="text-lg font-semibold mb-6">Contact</h4>
                     <div class="space-y-3 text-gray-300">
-                        <p>🇧🇯 Cotonou, Bénin</p>
-                        <p>🇫🇷 Paris, France</p>
-                        <p>📧 contact@cyritech.com</p>
-                        <p>📞 +229 XX XX XX XX</p>
+                        <p>🇨🇮 Côte d'Ivoire, +225 07 5909 5908</p>
+                        <p>🇧🇯 Bénin, +229 01 6508 5026</p>
+                        <p>🇱🇺 Luxembourg, +352 691 515 908</p>
+                        <p>🇧🇪 Belgique, +32 477 088 231</p>
+                        <p>🇳🇱 Pays-Bas, +31 684 290 386</p>
+                        <p>📧 info@cyritech.com</p>
+                      
                     </div>
                 </div>
                 
+                <!-- Newsletter -->
                 <div>
                     <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
                     <p class="text-gray-300 mb-4 text-sm">
@@ -651,12 +536,26 @@
             
             <div class="border-t border-gray-700 mt-12 pt-8 text-center">
                 <p class="text-gray-400">
-                    © 2025 Cyritech Cloud Security & Loans. Tous droits réservés.
+                    © 2025 <a href="index.html">Cyritech Cloud Security § Loans</a>. Tous droits réservés. Par  <a href="https://cyritech.com/alainazonlignon/">Alain AZONLIGNON</a>.
                 </p>
             </div>
         </div>
     </footer>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.getElementById("navbar");
+    
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.remove("bg-transparent");
+                    navbar.classList.add("bg-cyri-blue-dark", "text-white");
+                } else {
+                    navbar.classList.add("bg-transparent");
+                    navbar.classList.remove("bg-cyri-blue-dark", "text-white");
+                }
+            });
+        });
+    </script>
     <script>
         // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
